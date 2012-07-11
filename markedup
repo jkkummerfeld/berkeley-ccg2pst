@@ -1,0 +1,3629 @@
+#
+#
+S/(S\NP)
+  1 (S{_}/(S{Y}<1>\NP{Z}){Y}){_}
+  (WHADVP 0) POS:WRB
+  {(TEMP 0)} POS:default
+  (S 0 1)
+
+((S[dcl]/S[dcl])\NP)/S[dcl]
+  3 (((S[X]{Y}/S[X]{Y}<1>){_}\NP{Z}<2>){_}/S[dcl]{W}<3>){_}
+  (VP 0 (SBAR 3))
+  {(TEMP 2 0)}
+  (S* 0 {1})
+
+((S[pt]\NP)/S[dcl])/NP
+  3 (((S[pt]{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} (SBAR 2))
+  (S 1 0)
+
+((S\NP)/S)/NP
+  3 (((S{_}\NP{Y}<1>){_}/S{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(S\NP)\((S\NP)/NP)
+  2 (S{_}\NP{X}<1>)\((S{Y}\NP{X}){Z}/NP{W}<2>){_}
+  (VP 2 0)
+  (S 1 0)
+
+(S\NP)\((S\NP)/PP)
+  2 (S{_}\NP{X}<1>)\((S{Y}\NP{X}){Z}/PP{W}<2>){_}
+  (VP 2 0)
+  (S 1 0)
+
+(S[dcl]/(S[pss]\NP))/NP
+  2 ((S[dcl]{_}/(S[pss]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  (SINV 0 2)
+  (SINV {0} 1)
+
+(((S[adj]\NP)/(S[adj]\NP))/((S[adj]\NP)/(S[adj]\NP)))/(S[asup]\NP)
+  1 (((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}\NP{Z}){Y}){W}/((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}\NP{Z}){Y}){W}){V}/(S[asup]{Y}\NP{X}<1>){_}
+  (S 0 1)
+  (ADVP 0 {1})
+  (VP 0 {1})
+  (S 1 0)
+
+(((S[b]\NP)/(S[to]\NP))/PP)/NP
+  4 ((((S[b]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/PP{V}<3>){_}/NP{U}<4>){_} 
+  (VP 0 4)
+  (VP {0} 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(((S[adj]\NP)/(S[adj]\NP))/((S[adj]\NP)/(S[adj]\NP)))\(S[adj]\NP)
+  4 (((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}\NP{Z}){Y}){W}/((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}\NP{Z}){Y}){W}){V}\(S[adj]{Y}\NP{X}<1>){_}
+  (ADVP {1} 0)
+  (ADVP {0} {1})
+  (VP 0 {1})
+  (S 1 0)
+
+(S\S)/S
+  2 ((S[X]{Y}\S[X]{Y}<1>){_}/S{Z}<2>){_}
+  (S 0 2)
+  (S* 1 0)
+
+(S/S)/S
+  2 ((S[X]{Y}\S[X]{Y}<1>){_}/S{Z}<2>){_}
+  (S 0 2)
+  (S* 0 {1})
+
+S[wq]/NP
+  1 (S[wq]{_}/NP{Y}<1>){_}
+  (SBARQ 0 1)
+
+(S\NP)\((S\NP)/(S\NP))
+  2 ((S{Y}\NP{Z}){Y}<1>\((S{Y}\NP{Z}){Y}/(S{Y}\NP{Z}){Y}<2>)){_}
+  (VP 2 0)
+  (S 1 0)
+
+(S\NP)\((S\NP)/(S[adj]\NP))
+  2 ((S{Y}\NP{Z}){Y}<1>\((S{Y}\NP{Z}){Y}/(S[adj]{Y}\NP{Z}){Y}<2>)){_}
+  (ADJP 2 0)
+  (S 1 0)
+
+S[frg]/PP
+  1 (S[frg]{_}/PP{Y}<1>){_}
+  (FRAG 0 1)
+
+((S/S)\(S/S))/(S[adj]\NP)
+  3 (((S[X]{Y}<1>/S[X]{Y}){Z}\(S[X]{Y}/S[X]{Y}){Z}<2>){_}/(S[dcl]{W}\NP{V}){U}<3>){_}
+  {(TEMP 0)}
+  (PP 0 3) arg:ADVP:
+  (PP 0 (ADJP 3)) arg:default:
+  (ADVP 2 0)
+  (S 0 1)
+
+((S[to]\NP)/PP)/NP
+  3 (((S[to]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(((S\NP)\(S\NP))\((S\NP)\(S\NP)))/(S[to]\NP)
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<1>){_}/(S[to]{V}<2>\NP{U}){V}){_}
+  (SBAR 0 2)
+  (ADVP 1 0)
+  (VP {1} 0)
+  (S 1 0)
+
+(((S[dcl]\NP)/(S[to]\NP))/NP)/NP[expl]
+  4 ((((S[dcl]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}/NP[expl]{X}<4>){_}
+  {(TEMP 0 4)}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+(S[dcl]\S[q])\NP
+  2 ((S[dcl]{_}\S[q]{Y}<1>){_}\NP{Z}<2>){_}
+  (VP 0)
+  (VP 2 0)
+  (S {1} {0})
+
+((S[ng]\NP)/S[em])/PP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(S[dcl]\NP)/S[as]
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/S[as]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(((S\NP)\(S\NP))/S[dcl])\((NP\NP)/NP)
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/S[dcl]{W}<2>){_}\((NP{W}\NP{W})/NP{W}<3>)){_}
+  (WHNP 0)
+  (WHPP 3 0)
+  (SBAR 0 2)
+  (VP {1} 0)
+  (S 1 0)
+
+((S\NP)\(S\NP))/(S\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S{W}<2>\NP{Z*}){W}){_}
+  (PP 0 2)
+  (VP {1} 0)
+  (S 1 0)
+
+(S\NP)/S[dcl]
+  2 ((S{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}
+  (WHADVP 0)
+  (SBAR 0 2)
+  (S 1 0)
+
+(((S\NP)\(S\NP))\NP)/(S[ng]\NP)
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}\NP{W}<2>){_}/(S[ng]{Y}\NP{V}<3>)){_}
+  (PP 0 3)
+  (VP {2} 0)
+  (VP 1 0)
+  (S 1 0)
+
+(S[pss]\NP)/S
+  2 ((S[pss]{_}\NP{Y}<1>){_}/S{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(((S\NP)\(S\NP))/((S\NP)\(S\NP)))\(((S\NP)\(S\NP))/((S\NP)\(S\NP)))
+  1 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}){V}\(((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}){V}<1>){_}
+  (ADVP 1 0)
+  (ADVP 0 {1})
+  (VP {1} 0)
+  (S 1 0)
+
+(((S\NP)\(S\NP))\((S\NP)\(S\NP)))\(((S\NP)\(S\NP))\((S\NP)\(S\NP)))
+  1 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}){V}\(((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}){V}<1>){_}
+  (ADVP 0)
+  (NP 1 0)
+  (ADVP {1} 0)
+  (VP {1} 0)
+  (S 1 0)
+
+((NP\NP)/(NP\NP))/(S[asup]\NP)
+  3 (((NP{Y}\NP{Y}<1>){_}/(NP{Z}\NP{Z}){W}<3>){_}/(S[asup]{U}\NP{V}){X}<2>){_}
+  (ADVP 0 3)
+  (PP 0 {2})
+  (NP 1 0)
+
+N/(N\N)
+  1 (N{Y}){Z}/(N{Y}/N{Y}){Z}<1>){_}
+  (N 0 1)
+
+((N\N)/(S[to]\NP))\((NP\NP)/NP)
+  3 (((N{X}\N{X}<1>){_}/(S[to]{Z}\NP{X}<2>))\((NP{X}\NP{X}){Y}/NP{X}){W}<3>){_}
+  (WHNP 0)
+  (WHPP 3 0)
+  (SBAR 0 2)
+  (NX 1 0)
+
+((S[pss]\NP)/(S[to]\NP))/(PP/NP)
+  3 (((S[pss]{X}\NP{Y}<1>){Z}/(S[to]{X}\NP{Y}){Z}<2>){W}/(PP{V}/NP{U}){T}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(((S\NP)\(S\NP))/S[dcl])/N
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/S[dcl]{W}<2>){_}/N{V}<3>){_}
+  (NP 0 {3})
+  (SBAR {0} 2)
+  (VP {1} 0)
+  (S 1 0)
+
+((S[b]\NP)/S[qem])/(S[adj]\NP)
+  3 (((S[b]{X}\NP{Y}<1>){_}/S[qem]{Z}<2>){_}/(S[adj]{W}\NP{V}){_}<3>){_}
+  {(TEMP 0)}
+  (VP 0 3) arg:ADVP:
+  (VP 0 (ADJP 3)) arg:default:
+  (VP {0} 2)
+  (S 1 0)
+
+(S[dcl]\(S[to]\NP))/(S[b]\NP)
+  2 ((S[dcl]{X}\(S[to]{X}\NP{Y}){Z}<1>){_}/(S[b]{X}\NP{W})<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(((S[adj]\NP)\(S[adj]\NP))/((S[adj]\NP)\(S[adj]\NP)))\(S[adj]\NP)
+  4 ((((S[adj]{X}<1>\NP{Y}){_}\(S[adj]{X}\NP{Y}){_}<2>)/((S[adj]{X}\NP{Y}){_}\(S[adj]{X}\NP{Y}){_}){Z}<3>){W}\(S[adj]{X}\NP{Y}){_}<4>){_}
+  (ADJP 4 0)
+  (ADJP {0} {3})
+  (VP {2} 0)
+  (S 1 0)
+
+((S[dcl]\S[dcl])/(S[ng]\NP))/NP
+  3 (((S[dcl]{W}<1>\S[dcl]{W}){_}/(S[ng]{W}\NP{Z})<2>{Y}){_}/NP{X}<3>){_}
+  (VP 0)
+  (S 0 3)
+  (S {0} 2)
+  (SINV 1 {0})
+
+(((S\NP)/(S\NP))/((S\NP)/(S\NP)))/(S[asup]\NP)
+  4 ((((S{X}\NP{Y}<1>){_}/(S{X}\NP{Y}){_}<2>){Z}/((S{X}\NP{Y}){Z}/(S{X}\NP{Y}){Z}){W}<3>){_}/(S[asup]{X}\NP{Y})<4>){_}
+  (ADVP 0 4)
+  (PP 0 3)
+  (PP {0} 2)
+  (S 1 0)
+
+(((S\NP)\(S\NP))/(S[dcl]\NP))\(NP/NP)
+  4 ((((S{X}\NP{Y}<1>){_}\(S{X}\NP{Y}){Z}<2>){_}/(S[dcl]{X}\NP{Y}){Z}<3>){_}\(NP{W}/NP{V}){U}<4>){_}
+  (WHNP 0)
+  (WHNP 4 0)
+  (SBAR 0 3)
+  (VP {2} 0)
+  (S 1 0)
+
+((S[dcl]\NP)\NP)/(S[pt]\NP)
+  3 (((S[dcl]{X}\NP{Y}<1>){_}\NP{Y}<2>){_}/(S[pt]{X}\NP{Y}){W}<3>){_}
+  (VP 0 3)
+  (S 2 0)
+  (S 1 0)
+
+((S/S)\(S/S))/((S/S)\(S/S))
+  3 (((S{X}/S{X}<1>){Y}\(S{X}/S{X}){Y}<2>){_}/((S{X}/S{X}){Y}\(S{X}/S{X}){Y}){W}<3>){_}
+  (NP 0 3)
+  (S {2} 0)
+  (SBAR 0 1)
+
+(NP\NP)/((S[dcl]\NP)/NP)
+  2 ((NP{X}\NP{X}<1>){_}/((S[dcl]{Y}\NP{X})/NP{Z}){W}<2>){_}
+  (WHNP 0)
+  (SBAR 0 2)
+  (NP 1 0)
+
+((S[pt]\NP)/S[em])/(S[adj]\NP)
+  3 (((S[pt]{X}\NP{Y}<1>){_}/S[em]{X}<2>){_}/(S[adj]{X}\NP{Y}){Z}<3>){_}
+  {(TEMP 0)}
+  (VP 0 3) arg:ADVP:
+  (VP 0 (ADJP 3)) arg:default:
+  (VP >{0} (S >{0} 2))
+  (S 1 0)
+
+((NP\NP)/(NP\NP))/N[num]
+  3 (((NP{X}\NP{X}<1>){_}/(NP{X}\NP{X}){Y}<2>){_}/N[num]{Z}<3>){_}
+  (ADJP 0 {3})
+  (NP 0 {2})
+  (FRAG 1 0)
+
+((((S[adj]\NP)/(S[adj]\NP))/((S[adj]\NP)/(S[adj]\NP)))\(((S[adj]\NP)/(S[adj]\NP))/((S[adj]\NP)/(S[adj]\NP))))/(((S[adj]\NP)/(S[adj]\NP))/((S[adj]\NP)/(S[adj]\NP)))
+  5 (((((S[adj]{X}\NP{X}<1>){X}/(S[adj]{X}\NP{X}){X}<2>){X}/((S[adj]{X}\NP{X}){X}/(S[adj]{X}\NP{X}){X}){X}<3>){X}\(((S[adj]{X}\NP{X}){X}/(S[adj]{X}\NP{X}){X}){X}/((S[adj]{X}\NP{X}){X}/(S[adj]{X}\NP{X}){X}){X}){X}<4>){X}/(((S[adj]{X}\NP{X}){X}/(S[adj]{X}\NP{X}){X}){X}/((S[adj]{X}\NP{X}){X}/(S[adj]{X}\NP{X}){X}){X}){X}<5>){_}
+  (QP 0 {5})
+  (QP {4} {0})
+  (NP 0 {3})
+  (ADJP 0 {2})
+  (S 1 0)
+
+((S\NP)/PP)\(((S\NP)/PP)/NP)
+  3 ((S\NP)/PP)\(((S\NP)/PP)/NP)
+  (VP 3 0)
+  (VP {0} 2)
+  (S 1 0)
+
+(((S\NP)\(S\NP))/S
+  3 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/S{W}<2>){_}
+  (SBAR 0 2)
+  (VP {1} 0)
+  (S 1 0)
+
+,
+  0 ,{_}
+  {(, 0)}
+
+.
+  0 .{_}
+  {(. 0)}
+
+:
+  0 :{_}
+  (: 0)
+
+;
+  0 ;{_}
+  (; 0)
+
+LRB
+  0 LRB{_}
+  (LRB 0)
+
+N
+  0 N{_}
+  (N 0)
+
+NP
+  0 NP{_}
+  (NP 0)
+
+NP[expl]
+  0 NP[expl]{_}
+  (NP 0)
+
+PP
+  0 PP{_}
+  (PP 0)
+
+RRB
+  0 RRB{_}
+  (RRB 0)
+
+S
+  0 S{_}
+  (S 0)
+
+S[inv]
+  0 S[dcl]{_}
+  (SINV 0)
+
+S[dcl]
+  0 S[dcl]{_}
+  (S 0)
+
+S[frg]
+  0 S[frg]{_}
+  (S 0)
+
+S[intj]
+  0 S[intj]{_}
+  (S 0)
+
+S[wq]
+  0 S[wq]{_}
+  (S 0)
+
+conj
+  0 conj{_}
+  (conj 0)
+
+N[num]
+  0 N[num]{_}
+  (N 0)
+
+NP[thr]
+  0 NP[thr]{_}
+  (NP 0)
+
+N/N
+  1 (N{Y}/N{Y}<1>){_}
+  (Nslash 0)
+  (Nnum {0} {1}) POS:CD,RB
+  (N {0} {1}) POS:default
+
+NP[nb]/N
+  1 (NP[nb]{Y}/N{Y}<1>){_}
+  (NP 0 {1})
+
+(NP\NP)/NP
+  2 ((NP{Y}\NP{Y}<1>){_}/NP{Z}<2>){_}
+  {(TEMP 0 2)} POS:-LRB-
+  (NP 0 2) POS::
+  (PP 0 2) POS:default Word:default
+  (NP {1} 0) arg:(NP PP):
+  (NP {1} 0) arg:(NP SBAR):
+  (NP 1 0) arg:default:
+
+((S\NP)\(S\NP))/NP
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/NP{W}<2>){_}
+  (NP 0 2) POS::
+  (PP 0 2) POS:default
+  (VP {1} 0)
+  (S 1 0)
+
+PP/NP
+  1 (PP{_}/NP{Y}<1>){_}
+  (PP 0 1)
+
+(S[dcl]\NP)/NP
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S\NP)\(S\NP)
+  1 ((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}
+  {(TEMP 0)} Word:n't
+  {(TEMP 0)} Word:not
+  {(TEMP 0)} POS:DT
+  (NP 0) POS:NNP,NN,CD
+  (ADVP 0) Word:default POS:default
+  (VP {1} 0)
+  (S 1 0)
+
+(S[b]\NP)/NP
+  2 ((S[b]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[to]\NP)/(S[b]\NP)
+  2 ((S[to]{_}\NP{Z}<1>){_}/(S[b]{Y}<2>\NP{Z*}){Y}){_}
+  (S (VP 0 2))
+  (S 1 {0})
+
+(S[dcl]\NP)/(S[b]\NP)
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/(S[b]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(NP[nb]/N)\NP
+  2 ((NP[nb]{Y}/N{Y}<1>){_}\NP{Z}<2>){_}
+  (NP {2} 0)
+  (NP 0 {1})
+
+S[adj]\NP
+  1 (S[adj]{_}\NP{Y}<1>){_}
+  (ADVP 0) POS:RB
+  {(TEMP 0)} POS:default
+  (S 1 0)
+
+S[pss]\NP
+  1 (S[pss]{_}\NP{Y}<1>){_}
+  (VP 0)
+  (S 1 0)
+
+# Note, this category is used in a range of constructions, the label should probably come from the sub-thing
+(N/N)/(N/N)
+  1 ((N{Y}/N{Y}){Z}/(N{Y}/N{Y}){Z}<1>){_}
+  (N 0)
+  (QP {0} {1}) arg:(CD):
+  (ADJP {0} {1}) arg:default:
+  (N 0 {1})
+
+(S[ng]\NP)/NP
+  2 ((S[ng]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S\NP)/(S\NP)
+  1 ((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}<1>\NP{Z}){Y}){_}
+  (LST 0) POS:LS
+  (INTJ 0) POS:UH
+  (NP 0) POS:NNP,NN
+  (ADVP 0) POS:RB
+  {(TEMP 0)} POS:default
+  (VP 0 {2}) POS:JJ
+  (S 0 2) POS:LS,UH
+  {(TEMP {0} 2)} Word:Not,not
+  (VP 0 2) POS:default
+  (S 1 {0})
+
+(S[dcl]\NP)/S[dcl]
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}
+  (VP 0 (SBAR 2))
+  (S 1 0)
+
+S[dcl]\NP
+  1 (S[dcl]{_}\NP{Y}<1>){_}
+  (VP 0)
+  (S 1 0)
+
+(S[dcl]\NP)/(S[pt]\NP)
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/(S[pt]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+S/S
+  1 (S[X]{Y}/S[X]{Y}<1>){_}
+  (ADVP 0) POS:RB,JJ,JJR
+  (INTJ 0) POS:UH
+  (NP 0) POS:NN
+  {(TEMP 0)} POS:default
+  (S* {0} {1}) POS:RB Word:So,so,yet,Yet,soon
+  (S* 0 {1}) POS:default Word:default
+
+(NP\NP)/(S[dcl]\NP)
+  2 ((NP{Y}\NP{Y}<1>){_}/(S[dcl]{Z}<2>\NP{Y*}){Z}){_}
+  (WHNP 0)
+  (SBAR 0 (S 2))
+  (NP {1} 0) arg:(NP PP):
+  (NP {1} 0) arg:(NP NP):
+  (NP 1 0) arg:default:
+
+(S/S)/NP
+  2 ((S[X]{Y}/S[X]{Y}<1>){_}/NP{Z}<2>){_}
+  (SBAR (WHNP 0) (FRAG 2)) POS:WP,WDT
+  (PP 0 2) POS:default
+  (S* 0 {1})
+
+(S[dcl]\NP)/(S[adj]\NP)
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/(S[adj]{Z}<2>\NP{Y*}){Z}){_}
+  {(TEMP 0)}
+  (VP 0 2) arg:ADVP:
+  (VP 0 (ADJP 2)) arg:default:
+  (S 1 0)
+
+(S[dcl]\NP)/(S[pss]\NP)
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/(S[pss]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+S[em]/S[dcl]
+  1 (S[em]{_}/S[dcl]{Y}<1>){_}
+  (SBAR 0 1)
+
+((S\NP)\(S\NP))/((S\NP)\(S\NP))
+  1 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<1>){_}
+  {(ADVP 0)} POS:RB
+  {(TEMP 0)} POS:default
+  (NP 0 {3}) POS:CD
+  (ADVP 0 {3}) POS:RB arg:ADVP:
+  (NP 0 {3}) POS:RB arg:NP:
+  (ADVP* (ADVP 0) {3}) POS:RB arg:default:
+  (ADVP* 0 {3}) POS:default
+  (VP {2} 0)
+  (S 1 0)
+
+(S[dcl]\NP)/(S[ng]\NP)
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S\NP)\(S\NP))/S[dcl]
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/S[dcl]{W}<2>){_}
+  (WHADVP 0) POS:WRB
+  {(TEMP 0)} POS:default
+  (SBAR 0 2)
+  (VP {1} 0)
+  (S 1 0)
+
+(S[dcl]\NP)/PP
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[dcl]\NP)/(S[to]\NP)
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+S[b]\NP
+  1 (S[b]{_}\NP{Y}<1>){_}
+  (VP 0)
+  (S 1 0)
+
+NP\NP
+  1 (NP{Y}\NP{Y}<1>){_}
+  (NP 0) POS:NNP,NN
+  (ADVP 0) POS:RB
+  {(TEMP 0)} POS:default
+  {(TEMP 1 0)} Word:not
+  (NP {1} 0) Word:default arg:(NP PP ...):
+  (NP 1 0) Word:default arg:default:
+
+(S[pt]\NP)/NP
+  2 ((S[pt]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[pss]\NP)/PP
+  2 ((S[pss]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[dcl]\NP)/S[em]
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[adj]\NP)/(S[adj]\NP)
+  1 ((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}<1>\NP{Z}){Y}){_}
+  {(TEMP 0)}
+  (ADJP 0 {1})
+  (S 1 0)
+
+NP/NP
+  1 (NP{Y}/NP{Y}<1>){_}
+  (NP 0)
+  (NP {0} {1})
+
+(S/S)/S[dcl]
+  2 ((S[X]{Y}/S[X]{Y}<1>){_}/S[dcl]{Z}<2>){_}
+  (WHADVP 0) POS:WRB
+  {(TEMP 0)} POS:default
+  (SBAR 0 2)
+  (S* 0 {1})
+
+(S[dcl]\S[dcl])\NP
+  2 ((S[dcl]{_}\S[dcl]{Y}<1>){_}\NP{Z}<2>){_}
+  (VP 0)
+  {(TEMP 2 0)}
+  (S 1 0)
+
+(S[b]\NP)/(S[pss]\NP)
+  2 ((S[b]{_}\NP{Y}<1>){_}/(S[pss]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(NP\NP)/(NP\NP)
+  1 ((NP{Y}\NP{Y}){Z}/(NP{Y}\NP{Y}){Z}<1>){_}
+  {(TEMP 0)}
+  (NP 0 {2}) POS:JJ arg:(NN):
+  (PP 0 {2}) POS:JJ arg:default:
+  (PP (ADVP 0) {2}) POS:RB
+  (QP 0 {2}) POS:CC
+  (NP 0 {2}) POS:default
+  (NP {1} 0) POS:CC
+  (NP {1} 0) POS:default arg:(NP PP):
+  (NP 1 0) POS:default arg:default:
+
+(S[b]\NP)/PP
+  2 ((S[b]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(NP\NP)/N
+  2 ((NP{Y}\NP{Y}<1>){_}/N{Z}<2>){_}
+  (NP 0 {2})
+  (NP {1} 0) arg:(NP PP):
+  (NP 1 0) arg:default:
+
+S[ng]\NP
+  1 (S[ng]{_}\NP{Y}<1>){_}
+  (VP 0)
+  (S 1 0)
+
+((S[dcl]\NP)/PP)/NP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+N\N
+  1 (N{Y}\N{Y}<1>){_}
+  (Nslash 0)
+  (N {1} {0})
+
+(S[adj]\NP)/PP
+  2 ((S[adj]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}
+  (ADJP 0 2)
+  (S 1 0)
+
+((S[b]\NP)/PP)/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(S[dcl]\S[dcl])/NP
+  2 ((S[dcl]{_}\S[dcl]{Y}<1>){_}/NP{Z}<2>){_}
+  (VP 0)
+  {(TEMP 0 2)}
+  (SINV 1 0)
+
+((S\NP)\(S\NP))/PP
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/PP{W}<2>){_}
+  (WHADVP 0) POS:WRB
+  {(TEMP 0)} POS:default
+  (ADVP 0 2) POS:JJ
+  (PP 0 {2}) Word:because,Because
+  (PP 0 2) POS:default Word:default
+  (VP {1} 0)
+  (S 1 0)
+
+(S[b]\NP)/(S[adj]\NP)
+  2 ((S[b]{_}\NP{Y}<1>){_}/(S[adj]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 (ADJP {2}))
+  (S 1 0)
+
+(S[ng]\NP)/PP
+  2 ((S[ng]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[pss]\NP)/(S[to]\NP)
+  2 ((S[pss]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S\NP)\(S\NP))/(S[ng]\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[ng]{W}<2>\NP{Z*}){W}){_}
+  (PP 0 (S 2))
+  (VP {1} 0)
+  (S 1 0)
+
+((S\NP)\(S\NP))/N
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/N{W}<2>){_}
+  (NP 0 {2})
+  (VP {1} 0)
+  (S 1 0)
+
+(NP\NP)/S[dcl]
+  2 ((NP{Y}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}
+  (WHADVP 0) POS:WRB
+  {(TEMP 0)} POS:default
+  (SBAR 0 2)
+  (NP {1} 0) arg:(NP PP):
+  (NP 1 0) arg:default:
+
+(S[adj]\NP)/(S[to]\NP)
+  2 ((S[adj]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{Y*}){Z}){_}
+  (ADJP 0 2)
+  (S 1 0)
+
+PP/(S[ng]\NP)
+  1 (PP{_}/(S[ng]{Y}<1>\NP{Z}){Y}){_}
+  (PP 0 (S 1))
+
+(NP\NP)/(S[ng]\NP)
+  2 ((NP{Y}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{Y*}){Z}){_}
+  (PP 0 (S 2))
+  (NP 1 0)
+
+((S[adj]\NP)\(S[adj]\NP))/NP
+  2 (((S[adj]{Y}\NP{Z}){Y}\(S[adj]{Y}<1>\NP{Z}){Y}){_}/NP{W}<2>){_}
+  (PP 0 2)
+  {(TEMP {1} 0)} POS:IN
+  (VP {1} 0) POS:default
+  (S 1 0)
+
+S[pt]\NP
+  1 (S[pt]{_}\NP{Y}<1>){_}
+  (VP 0)
+  (S 1 0)
+
+(S[ng]\NP)/(S[to]\NP)
+  2 ((S[ng]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S/S)/(S/S)
+  1 ((S[X]{Y}/S[X]{Y}){Z}/(S[X]{Y}/S[X]{Y}){Z}<1>){_}
+  (ADVP 0) POS:RB
+  (ADVP {0} {2}) POS:RB arg:(RB ...):
+  (SBAR 0 {2}) POS:RB arg:default:
+  (PP 0 {2}) POS:RB Word:Not
+  (NP 0 {2}) POS:default Word:default
+  (S* 0 {1})
+
+(S[b]\NP)/(S[to]\NP)
+  2 ((S[b]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[ng]\NP)/PP)/NP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[dcl]\NP)/(S[to]\NP))/NP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 {2})) arg:S:
+  (VP >0 (S >0 2)) arg:default:
+  (S 1 0)
+
+(S[pt]\NP)/(S[pss]\NP)
+  2 ((S[pt]{_}\NP{Y}<1>){_}/(S[pss]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+S[qem]/S[dcl]
+  1 (S[qem]{_}/S[dcl]{Y}<1>){_}
+  (WHADVP 0) POS:WRB
+  {(TEMP 0)} POS:default
+  (SBAR 0 1)
+
+((S\NP)/(S\NP))/NP
+  2 (((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}<1>\NP{Z}){Y}){_}/NP{W}<2>){_}
+  (PP 0 2)
+  {(TEMP 0 1)}
+  (S 1 0)
+
+N/S[em]
+  1 (N{_}/S[em]{Y}<1>){_}
+  (NP 0 1)
+
+(S[pss]\NP)/NP
+  2 ((S[pss]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}
+  (VP 0 (S 2))
+  (S 1 0)
+
+(S[adj]\NP)/NP
+  2 ((S[adj]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}
+  (ADVP 0 2)
+  (S 1 0)
+
+(S[b]\NP)/(S[pt]\NP)
+  2 ((S[b]{_}\NP{Y}<1>){_}/(S[pt]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[b]\NP)/(S[ng]\NP)
+  2 ((S[b]{_}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(NP\NP)/(S[dcl]/NP)
+  2 ((NP{Y}\NP{Y}<1>){_}/(S[dcl]{Z}<2>/NP{Y*}){Z}){_}
+  (WHNP 0)
+  (SBAR 0 (S 2))
+  (NP 1 0)
+
+(S[pt]\NP)/PP
+  2 ((S[pt]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+PP/PP
+  1 (PP{Y}/PP{Y}<1>){_}
+  (PP 0 1) Word:Out,out
+  (PP 0 {1}) POS:CC
+  (PP (ADVP 0) {1}) Word:default
+
+((S[b]\NP)/(S[to]\NP))/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 {2})) arg:S:
+  (VP >0 (S >0 2)) arg:default:
+  (S 1 0)
+
+(NP\NP)/PP
+  2 ((NP{Y}\NP{Y}<1>){_}/PP{Z}<2>){_}
+  (ADVP 0 2)
+  (NP {1} 0)
+
+(S[pt]\NP)/(S[ng]\NP)
+  2 ((S[pt]{_}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S/S)/PP
+  2 ((S[X]{Y}/S[X]{Y}<1>){_}/PP{Z}<2>){_}
+  (PP 0 2)
+  (S* 0 {1})
+
+(S[pt]\NP)/(S[adj]\NP)
+  2 ((S[pt]{_}\NP{Y}<1>){_}/(S[adj]{Z}<2>\NP{Y*}){Z}){_}
+  {(TEMP 0)}
+  (VP 0 2) arg:ADVP:
+  (VP 0 (ADJP 2)) arg:default:
+  (S 1 0)
+
+(S[ng]\NP)/(S[pss]\NP)
+  2 ((S[ng]{_}\NP{Y}<1>){_}/(S[pss]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+conj/conj
+  1 (conj{Y}/conj{Y}<1>){_}
+  (CONJP 0 {1})
+
+(S[adj]\NP)\NP
+  2 ((S[adj]{_}\NP{Y}<1>){_}\NP{Z}<2>){_}
+  (ADJP 2 0)
+  (S 1 0)
+
+(((S\NP)\(S\NP))\((S\NP)\(S\NP)))/NP
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<1>){_}/NP{V}<2>){_}
+  (PP 0 2)
+  (ADVP 1 0)
+  (VP {1} 0)
+  (S 1 0)
+
+((S[dcl]\NP)/NP)/NP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(S\S)/S[dcl]
+  2 ((S[X]{Y}\S[X]{Y}<1>){_}/S[dcl]{Z}<2>){_}
+  (S 0 2)
+  (S* 1 0)
+
+(S[pt]\NP)/(S[to]\NP)
+  2 ((S[pt]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[pt]\NP)/PP)/NP
+  3 (((S[pt]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+S[asup]\NP
+  1 (S[asup]{_}\NP{Y}<1>){_}
+  (VP 0)
+  (S 1 0)
+
+((N/N)/(N/N))\(S[adj]\NP)
+  2 (((N{Y}/N{Y}){Z}/(N{Y}/N{Y}){Z}<1>){_}\(S[adj]{W}<2>\NP{V}){W}){_}
+  {(TEMP {3} 0)}
+  (ADJP (QP 0 {2})) arg:(CD):
+  (ADJP 0 {2}) arg:default:
+  (N {0} {1})
+
+((NP\NP)/S[dcl])\((NP\NP)/NP)
+  3 (((NP{Y}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}\((NP{W}\NP{W}){V}/NP{U}){V}<3>){_}
+  (WHNP 0)
+  (WHPP {3} 0)
+  (SBAR 0 2)
+  (NP 1 0)
+
+(S[b]\NP)/S[em]
+  2 ((S[b]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[b]\NP)/NP)/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S\NP)/(S\NP))/((S\NP)/(S\NP))
+  1 (((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}\NP{Z}){Y}){W}<1>){_}
+  (ADVP* 0 {1})
+  (VP 0 1)
+  (S 1 0)
+
+NP/(S[dcl]/NP)
+  1 (NP{_}/(S[dcl]{Y}<1>/NP{Z}){Y}){_}
+  (WHNP 0)
+  (SBAR 0 1)
+
+(S[ng]\NP)/S[em]
+  2 ((S[ng]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[b]\NP)/S[dcl]
+  2 ((S[b]{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}
+  (VP 0 (SBAR 2))
+  (S 1 0)
+
+(S[b]\NP)/S[qem]
+  2 ((S[b]{_}\NP{Y}<1>){_}/S[qem]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S\NP)\(S\NP))\NP
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}\NP{W}<2>){_}
+  (ADVP 2 0)
+  (VP {1} 0)
+  (S 1 0)
+
+S\S
+  1 (S[X]{Y}\S[X]{Y}<1>){_}
+  (ADVP 0) POS:RB
+  (NP 0) POS:NN,NNP
+  {(TEMP 0)} POS:default
+  (S* 1 {0})
+
+((S[ng]\NP)/(S[to]\NP))/NP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+((S[b]\NP)/(S[adj]\NP))/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}/(S[adj]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2)) arg:ADVP:
+  (VP >0 (S >0 (ADJP 2))) arg:default:
+  (S 1 0)
+
+(S[pss]\NP)/(S[adj]\NP)
+  2 ((S[pss]{_}\NP{Y}<1>){_}/(S[adj]{Z}<2>\NP{Y*}){Z}){_}
+  {(TEMP 0)}
+  (VP 0 2) arg:ADVP:
+  (VP 0 (ADJP 2)) arg:default:
+  (S 1 0)
+
+(N\N)/N
+  2 ((N{Y}\N{Y}<1>){_}/N{Z}<2>){_}
+  (N 0 {2})
+  (N {1} {0})
+
+((S[dcl]\NP)/(S[adj]\NP))/NP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/(S[adj]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2)) arg:ADVP:
+  (VP >0 (S >0 (ADJP 2))) arg:default:
+  (S 1 0)
+
+(S[ng]\NP)/(S[adj]\NP)
+  2 ((S[ng]{_}\NP{Y}<1>){_}/(S[adj]{Z}<2>\NP{Y*}){Z}){_}
+  {(TEMP 0)}
+  (VP 0 2) arg:ADVP:
+  (VP 0 (ADJP 2)) arg:default:
+  (S 1 0)
+
+(S/S)/(S[ng]\NP)
+  2 ((S[X]{Y}/S[X]{Y}<1>){_}/(S[ng]{Z}<2>\NP{W}){Z}){_}
+  (PP 0 (S 2))
+  (S* 0 {1})
+
+(S/S)/N
+  2 ((S[X]{Y}/S[X]{Y}<1>){_}/N{Z}<2>){_}
+  (NP 0 {2})
+  (S* 0 {1})
+
+((S\NP)\(S\NP))/(S[adj]\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[adj]{W}<2>\NP{Z*}){W}){_}
+  {(TEMP 0)}
+  (SBAR 0 (FRAG 3)) arg:ADJP:
+  (SBAR 0 (FRAG (ADJP 3))) arg:JJ:
+  (SBAR 0 (FRAG (ADJP 3))) arg:TEMP:
+  (PP 0 (ADVP {3})) arg:default:
+  (VP {2} 0)
+  (S 1 0)
+
+(S[adj]\NP)\(S[adj]\NP)
+  1 ((S[adj]{Y}\NP{Z}){Y}\(S[adj]{Y}<1>\NP{Z}){Y}){_}
+  (VP {1} 0)
+  (S 1 0)
+
+((S\NP)\(S\NP))\((S\NP)\(S\NP))
+  1 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<1>){_}
+  (ADVP 0)
+  (NP 1 0)
+  (VP {1} 0)
+  (S 1 0)
+
+(S[for]/(S[to]\NP))/NP
+  2 ((S[for]{_}/(S[to]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  {(TEMP 0 2)}
+  (SBAR >0 (S >0 {1}))
+
+(S[dcl]\NP)/S[qem]
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/S[qem]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(N\N)/NP
+  2 ((N{Y}\N{Y}<1>){_}/NP{Z}<2>){_}
+  (PP 0 2)
+  (N {1} 0)
+
+((S[b]\NP)/(S[b]\NP))/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}/(S[b]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+(N/N)\(N/N)
+  1 ((N{Y}/N{Y}){Z}\(N{Y}/N{Y}){Z}<1>){_}
+  (N {1} 0)
+  (N {0} {1})
+
+(N/N)\(S[adj]\NP)
+  2 ((N{Y}/N{Y}<1>){_}\(S[adj]{Z}<2>\NP{W}){Z}){_}
+  (N 2 0)
+  (N (QP {0} {1})) arg:(CD):
+  (N {0} {1}) arg:default:
+
+((N/N)/(N/N))/((N/N)/(N/N))
+  1 (((N{Y}/N{Y}){Z}/(N{Y}/N{Y}){Z}){W}/((N{Y}/N{Y}){Z}/(N{Y}/N{Y}){Z}){W}<1>){_}
+  (N 0 {3})
+  (N (QP {0} {2})) arg:(CD):
+  (N {0} {2}) arg:default:
+  (N {0} {1})
+
+NP/(S[dcl]\NP)
+  1 (NP{_}/(S[dcl]{Y}<1>\NP{Z}){Y}){_}
+  (WHNP 0)
+  (SBAR 0 (S 1))
+
+(S[ng]\NP)/S[dcl]
+  2 ((S[ng]{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+((NP\NP)/(S[dcl]\NP))/N
+  3 (((NP{Y}\NP{Y}<1>){_}/(S[dcl]{Z}<2>\NP{W}){Z}){_}/N{W}<3>){_}
+  (WHNP 0 {3})
+  (SBAR 0 (S 2))
+  (NP 1 0)
+
+(S[pt]\NP)/S[em]
+  2 ((S[pt]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S/S)\NP
+  2 ((S[X]{Y}/S[X]{Y}<1>){_}\NP{Z}<2>){_}
+  (ADVP 2 0)
+  (S* 0 {1})
+
+(S[q]/(S[b]\NP))/NP
+  2 ((S[q]{_}/(S[b]{Y}<1>\NP{Z}){Y}){_}/NP{Z}<2>){_}
+  (SQ 0 2)
+  (SQ {0} 1)
+
+((NP\NP)\(NP\NP))/NP
+  2 (((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}<2>){_}/NP{W}<1>){_}
+  (PRN 0 3) POS:-LRB-
+  (PP 0 3) POS:default
+  (NP 2 0) POS:-LRB-
+  (NP 2 0) POS:default arg:NP:
+  (ADVP {2} 0) POS:default arg:default:
+  (NP {1} 0)
+
+PP/(S[adj]\NP)
+  1 (PP{_}/(S[adj]{Y}<1>\NP{Z}){Y}){_}
+  {(TEMP 0)}
+  (PP 0 1) arg:ADVP:
+  (PP 0 (ADJP 1)) arg:default:
+
+((N/N)\(N/N))/NP
+  2 (((N{Y}/N{Y}){Z}\(N{Y}/N{Y}){Z}<1>){_}/NP{W}<2>){_}
+  (PP 0 2)
+  (NP {1} 0)
+  (N 0 {1})
+
+(S[b]\NP)/(S[b]\NP)
+  2 ((S[b]{_}\NP{Y}<1>){_}/(S[b]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 (S 2))
+  (S 1 0)
+
+(S\S)/NP
+  2 ((S[X]{Y}\S[X]{Y}<1>){_}/NP{Z}<2>){_}
+  (PP 0 2)
+  (S* {1} 0)
+
+(NP\NP)\NP
+  2 ((NP{Y}\NP{Y}<1>){_}\NP{Z}<2>){_}
+  (ADVP 2 0)
+  (NP {1} 0) arg:(NP PP):
+  (NP 1 0) arg:default:
+
+((S[adj]\NP)/(S[adj]\NP))/((S[adj]\NP)/(S[adj]\NP))
+  1 (((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}\NP{Z}){Y}){W}/((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}\NP{Z}){Y}){W}<1>){_}
+  (ADVP 0 1) POS:RB
+  (NP 0 1) POS:default
+  (ADJP 0 {1}) POS:RB
+  (VP 0 {1}) POS:default
+  (S 1 0)
+
+((S[dcl]\NP[expl])/(S[to]\NP))/(S[adj]\NP)
+  3 (((S[dcl]{_}\NP[expl]{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/(S[adj]{V}<3>\NP{U}){V}){_}
+  {(TEMP 0)}
+  (ADVP 0 3) arg:ADVP:
+  (ADVP 0 (ADJP 3)) arg:default:
+  (VP {0} 2)
+  (S 1 0)
+
+(N/PP)/(S[adj]\NP)
+  2 ((N{_}/PP{Y}<1>){_}/(S[adj]{Z}<2>\NP{W}){Z}){_}
+  (NP 0 {2})
+  (N {0} {1})
+
+(NP\NP)\(NP\NP)
+  1 ((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}<1>){_}
+  (NP {1} 0)
+  (NP {1} 0)
+
+(((S\NP)\(S\NP))/((S\NP)\(S\NP)))/NP
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<2>){_}/NP{V}<1>){_}
+  (PP 0 2)
+  (PP 0 {1})
+  (VP {1} 0)
+  (S 1 0)
+
+(((S\NP)\(S\NP))/((S\NP)\(S\NP)))/(((S\NP)\(S\NP))/((S\NP)\(S\NP)))
+  1 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}){V}/(((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}){V}<1>){_}
+  (ADVP 0)
+  (PP 0 {1}) arg:PP:
+  (ADVP {0} {1}) arg:default:
+  (PP 0 1) arg:PP:
+  (ADVP {0} {1}) arg:default:
+  (VP {1} 0)
+  (S 1 0)
+
+(((S\NP)\(S\NP))\((S\NP)\(S\NP)))\NP
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<1>){_}\NP{V}<2>){_}
+  (ADVP 2 0)
+  (PP {1} 0)
+  (VP {1} 0)
+  (S 1 0)
+
+((S\NP)\(S\NP))/(S[dcl]\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[dcl]{W}<2>\NP{Z*}){W}){_}
+  (WHNP 0)
+  (SBAR 0 (S 2))
+  (VP {1} 0)
+  (S 1 0)
+
+(S[pt]\NP)/S[dcl]
+  2 ((S[pt]{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(NP/NP)/(NP/NP)
+  1 ((NP{Y}/NP{Y}){Z}/(NP{Y}/NP{Y}){Z}<1>){_}
+  (NP 0 {2})
+  (NP 0 {1})
+
+((S[dcl]\NP)/(S[b]\NP))/NP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/(S[b]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+((N/N)/(N/N))/(S[asup]\NP)
+  2 (((N{Y}/N{Y}){Z}/(N{Y}/N{Y}){Z}<2>){_}/(S[asup]{W}<1>\NP{V}){W}){_}
+  (QP 0 {2})
+  (QP {0} {1})
+  (N 0 {1})
+
+S[em]/S[b]
+  1 (S[em]{_}/S[b]{Y}<1>){_}
+  (S 0 1)
+
+((S[dcl]\NP)/(S[ng]\NP))/NP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+(NP\NP)/S[qem]
+  2 ((NP{Y}\NP{Y}<1>){_}/S[qem]{Z}<2>){_}
+  (PP 0 2)
+  (NP 1 0)
+
+(NP\NP)/(S[adj]\NP)
+  2 ((NP{Y}\NP{Y}<1>){_}/(S[adj]{Z}<2>\NP{W}){Z}){_}
+  (SBAR 0 (S 2))
+  (NP 1 0)
+
+(((S\NP)\(S\NP))/(S[ng]\NP))/NP
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[ng]{W}<2>\NP{V}){W}){_}/NP{U}<3>){_}
+  {(TEMP 0 3)}
+  (PP >0 (S >0 2))
+  (VP {1} 0)
+  (S 1 0)
+
+((N/N)\(N/N))/(N/N)
+  2 (((N{Y}/N{Y}){_}\(N{Z}/N{Z}){W}<1>){_}/(N{V}/N{V}){U}<2>){_}
+  (N 0 {2})
+  (N {1} {0})
+  (N {0} {1})
+
+(((S\NP)\(S\NP))\((S\NP)\(S\NP)))/S[dcl]
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<1>){_}/S[dcl]{V}<2>){_}
+  (SBAR 0 2)
+  (ADVP 1 0)
+  (VP {1} 0)
+  (S 1 0)
+
+((S[adj]\NP)\(S[adj]\NP))/S[dcl]
+  2 (((S[adj]{Y}\NP{Z}){Y}\(S[adj]{Y}<1>\NP{Z}){Y}){_}/S[dcl]{W}<2>){_}
+  (SBAR 0 2)
+  (ADVP 1 0)
+  (S 1 0)
+
+((S[dcl]\NP)/S[em])/NP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(S[adj]\NP)/S[em]
+  2 ((S[adj]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[ng]\NP)/(S[adj]\NP))/NP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/(S[adj]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2)) arg:ADVP:
+  (VP >0 (S >0 (ADJP 2))) arg:default:
+  (S 1 0)
+
+((S[pt]\NP)/(S[to]\NP))/NP
+  3 (((S[pt]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+((S[ng]\NP)/NP)/NP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[dcl]\NP)/NP)/(S[dcl]\NP)
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/(S[dcl]{W}<3>\NP{V}){W}){_}
+  (VP 0 (SBAR 3))
+  (VP {0} 2)
+  (S 1 0)
+
+PP/S[qem]
+  1 (PP{_}/S[qem]{Y}<1>){_}
+  (PP 0 1)
+
+(S[adj]\NP)/S[dcl]
+  2 ((S[adj]{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}
+  (ADJP 0 (SBAR 2))
+  (S 1 0)
+
+(((S\NP)\(S\NP))\((S\NP)\(S\NP)))/N
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<1>){_}/N{V}<2>){_}
+  (NP 0 {2})
+  (PP {1} 0) arg:PP:
+  (NP 1 0) arg:default:
+  (VP {1} 0)
+  (S 1 0)
+
+S[dcl]/NP
+  1 (S[dcl]{_}/NP{Y}<1>){_}
+  (VP 0)
+  (SINV 0 1)
+
+(NP\NP)/(S[pss]\NP)
+  2 ((NP{Y}\NP{Y}<1>){_}/(S[pss]{Z}<2>\NP{W}){Z}){_}
+  (SBAR 0 (S 2))
+  (NP 1 0)
+
+(S/S)/(S[adj]\NP)
+  2 ((S[X]{Y}/S[X]{Y}<1>){_}/(S[adj]{Z}<2>\NP{W}){Z}){_}
+  {(TEMP 0)}
+  (PP 0 2) arg:ADVP:
+  (PP 0 (ADJP 2)) arg:default:
+  (S* 0 {1})
+
+S[qem]/(S[to]\NP)
+  1 (S[qem]{_}/(S[to]{Y}<1>\NP{Z}){Y}){_}
+  (WHADVP 0)
+  (SBAR 0 1)
+
+((S[pss]\NP)/(S[to]\NP))/PP
+  3 (((S[pss]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/PP{V}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[dcl]\NP[expl])/S[em])/(S[adj]\NP)
+  3 (((S[dcl]{_}\NP[expl]{Y}<1>){_}/S[em]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  {(TEMP 0)}
+  (VP 0 3) arg:ADVP:
+  (VP 0 (ADJP 3)) arg:default:
+  (VP {0} 2)
+  (S 1 0)
+
+(S[pss]\NP)/S[em]
+  2 ((S[pss]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[dcl]\NP)/PP)/(S[adj]\NP)
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (VP 0 (ADVP 3))
+  (VP {0} 2)
+  (S 1 0)
+
+((NP\NP)\(NP\NP))/((NP\NP)\(NP\NP))
+  1 (((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}){W}/((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}){W}<1>){_}
+  {(TEMP 0)}
+  (ADVP 0 {1]) POS:RB arg:RB:
+  (QP 0 1) POS:RB arg:default:
+  (NP 0 {1]) POS:default
+  (PP {1} 0) arg:PP:
+  (NP 1 0) arg:default:
+  (NP 1 0)
+
+PP\PP
+  1 (PP{Y}\PP{Y}<1>){_}
+  (PP {1} 0)
+
+(S[dcl]\NP[expl])/(S[b]\NP)
+  2 ((S[dcl]{_}\NP[expl]{Y}<1>){_}/(S[b]{Z}<2>\NP{W}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[b]\NP)/(S[ng]\NP))/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+(PP\PP)\NP
+  2 ((PP{Y}\PP{Y}<1>){_}\NP{Z}<2>){_}
+  (ADVP 2 0)
+  (PP {1} 0)
+
+(S[dcl]\PP)/NP
+  2 ((S[dcl]{_}\PP{Y}<1>){_}/NP{Z}<2>){_}
+  (VP 0)
+  (VP 0 2)
+  (S 1 0)
+
+S[dcl]/S[dcl]
+  1 (S[dcl]{_}/S[dcl]{Y}<1>){_}
+  (S 0 1)
+
+S[wq]/S[q]
+  1 (S[wq]{_}/S[q]{Y}<1>){_}
+  (WHADVP 0) POS:WRB
+  {(TEMP 0)} POS:default
+  (S 0 1)
+
+S/S[dcl]
+  1 (S{_}/S[dcl]{Y}<1>){_}
+  (S 0 1)
+
+(S[dcl]\(S[adj]\NP))/NP
+  2 ((S[dcl]{_}\(S[adj]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  (VP 0)
+  (NP 0 2)
+  (SINV (ADJP 1) {0}) POS:VBD
+  (SINV (ADVP {1}) {0}) POS:VBP
+  (SINV 1 {0}) POS:default
+
+((S\NP)\(S\NP))/(S[pss]\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[pss]{W}<2>\NP{Z*}){W}){_}
+  (PRN 0 2)
+  (VP {1} 0)
+  (S 1 0)
+
+((S\NP)/(S\NP))/N
+  2 (((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}<2>\NP{Z}){Y}){_}/N{W}<1>){_}
+  (NP 0 {2})
+  (NP 0 1)
+  (S 1 0)
+
+((NP\NP)/(S[dcl]\NP))\(NP/NP)
+  3 (((NP{Y}\NP{Y}<1>){_}/(S[dcl]{Z}<2>\NP{W}){Z}){_}\(NP{V}/NP{V}){U}<3>){_}
+  (WHNP 0)
+  (WHNP {3} 0)
+  (SBAR 0 {2})
+  (NP {1} 0) arg:(NP PP):
+  (NP 1 0) arg:default:
+
+(((NP\NP)/(NP\NP))\((NP\NP)/(NP\NP)))/((NP\NP)/(NP\NP))
+  2 ((((NP{Y}\NP{Y}){Z}/(NP{Y}\NP{Y}){Z}){_}\((NP{Y}\NP{Y}){Z}/(NP{Y}\NP{Y}){Z}){W}<1>){_}/((NP{Y}\NP{Y}){U}/(NP{Y}\NP{Y}){U}){V}<2>){_}
+  (QP 0 1)
+  (QP 1 {0})
+  (NP 0 1)
+  (NP 1 0)
+
+((NP\NP)/(NP\NP))/NP
+  3 (((NP{Y}\NP{Y}<1>){_}/(NP{Z}\NP{Z}){W}<3>){_}/NP{V}<2>){_}
+  (PP 0 3)
+  (PP 0 2)
+  (PP 1 {0})
+
+S[wq]/(S[dcl]\NP)
+  1 (S[wq]{_}/(S[dcl]{Y}<1>\NP{Z}){Y}){_}
+  (WHNP 0)
+  (SBARQ 0 (SQ 1))
+
+NP/S[dcl]
+  1 (NP{_}/S[dcl]{Y}<1>){_}
+  (WHNP 0) POS:WP
+  (WHADVP 0) POS:WRB
+  (SBAR 0 1)
+
+(PP\PP)/NP
+  2 ((PP{Y}\PP{Y}<1>){_}/NP{Z}<2>){_}
+  (PP 0 2)
+  (PP {1} 0)
+
+((S[dcl]\NP)/S[dcl])/NP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} (SBAR 2))
+  (S 1 0)
+
+((S\NP)/(S\NP))/S[dcl]
+  2 (((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}<1>\NP{Z}){Y}){_}/S[dcl]{W}<2>){_}
+  (SBAR 0 2)
+  (VP 0 {1})
+  (S 1 0)
+
+(S[adj]\NP)/((S[to]\NP)/NP)
+  2 ((S[adj]{_}\NP{Y}<1>){_}/((S[to]{Z}<2>\NP{W}){Z}/NP{V}){Z}){_}
+  (ADJP 0 2)
+  (VP 1 0)
+
+((S[adj]\NP)/PP)/NP
+  3 (((S[adj]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 {3})
+  (ADVP {0} 2)
+  (S 1 0)
+
+(((S\NP)\(S\NP))/PP)/NP
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/PP{W}<2>){_}/NP{V}<3>){_}
+  {(TEMP 0 3)}
+  (ADVP 0 2)
+  (VP {1} 0)
+  (S 1 0)
+
+N/S[dcl]
+  1 (N{_}/S[dcl]{Y}<1>){_}
+  (NP 0 1)
+
+(((S[b]\NP)/PP)/PP)/NP
+  4 ((((S[b]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/PP{W}<3>){_}/NP{V}<4>){_}
+  (VP 0 4)
+  (VP 0 3)
+  (VP 0 2)
+  (S 1 0)
+
+((S[adj]\NP)/S[em])/(S[adj]\NP)
+  3 (((S[adj]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (ADJP 0 3)
+  (ADKP {0} 2)
+  (S 1 0)
+
+((NP\NP)/PP)/NP
+  3 (((NP{Y}\NP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}
+  (ADVP 0 3)
+  (ADVP {0} 2)
+  (NP 1 0)
+
+((S\NP)/(S\NP))/PP
+  2 (((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}<1>\NP{Z}){Y}){_}/PP{W}<2>){_}
+  (ADVP 0 2)
+  {(TEMP 0 1)}
+  (S 1 0)
+
+(S[ng]\NP)/(S[pt]\NP)
+  2 ((S[ng]{_}\NP{Y}<1>){_}/(S[pt]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(PP/PP)/NP
+  2 ((PP{_}/PP{Y}<1>){_}/NP{Z}<2>){_}
+  (PP 0 {2})
+  (PP 0 1)
+
+(S[ng]\NP)/S[qem]
+  2 ((S[ng]{_}\NP{Y}<1>){_}/S[qem]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+S[inv]/NP
+  1 (S[inv]{_}/NP{Y}<1>){_}
+  (VP 0)
+  (SINV 0 1)
+
+((S[pt]\NP)/NP)/NP
+  3 (((S[pt]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[dcl]\NP)/PP)/PP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(N/N)/N
+  2 ((N{Y}/N{Y}<1>){_}/N{Z}<2>){_}
+  (N 0 {2})
+  (N {0} {1})
+
+(((S\NP)\(S\NP))\((S\NP)\(S\NP)))/(((S\NP)\(S\NP))\((S\NP)\(S\NP)))
+  1 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}){V}/(((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}){V}<1>){_}
+  (NP 0 1)
+  (NP 1 0)
+  (VP {1} 0)
+  (S 1 0)
+
+((S[ng]\NP)/(S[b]\NP))/NP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/(S[b]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+(NP\NP)/(S[b]\NP)
+  2 ((NP{Y}\NP{Y}<1>){_}/(S[b]{Z}<2>\NP{W}){Z}){_}
+  (SBAR 0 (S 2))
+  (NP 1 0)
+
+((S/S)/(S[ng]\NP))/NP
+  3 (((S[X]{Y}/S[X]{Y}<1>){_}/(S[ng]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  (PP 0 3)
+  (PP >{0} (S >{0} 2))
+  (S 0 1)
+
+(S[dcl]\NP)/(S[dcl]\NP)
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/(S[dcl]{Z}<2>\NP{W}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[qem]/S[dcl])/(S[adj]\NP)
+  2 ((S[qem]{_}/S[dcl]{Y}<1>){_}/(S[adj]{Z}<2>\NP{W}){Z}){_}
+  (WHADVP 0 2)
+  (SBAR 0 1)
+
+(S[dcl]\NP)/S[for]
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/S[for]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[b]\NP)/NP)/(S[adj]\NP)
+  3 (((S[b]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[dcl]\NP)/NP)/PP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(S/S)/(S[pss]\NP)
+  2 ((S[X]{Y}/S[X]{Y}<1>){_}/(S[pss]{Z}<2>\NP{W}){Z}){_}
+  (WHADVP 0) POS:WRB
+  {(TEMP 0)} POS:default
+  (SBAR 0 (S 2))
+  (S* 0 {1})
+
+((S[adj]\NP)\(S[adj]\NP))/PP
+  2 (((S[adj]{Y}\NP{Z}){Y}\(S[adj]{Y}<1>\NP{Z}){Y}){_}/PP{W}<2>){_}
+  (PP 0 2)
+  (ADJP 1 0)
+  (S 1 0)
+
+(PP\NP)/NP
+  2 ((PP{_}\NP{Y}<1>){_}/NP{Z}<2>){_}
+  (PP 0 2)
+  (PP 1 {0})
+
+(S[qem]/(S[dcl]/NP))/N
+  2 ((S[qem]{_}/(S[dcl]{Y}<1>/NP{Z}){Y}){_}/N{W}<2>){_}
+  (WHNP 0 {2})
+  (SBAR 0 1)
+
+(((S\NP)\(S\NP))\NP)/NP
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}\NP{W}<2>){_}/NP{V}<3>){_}
+  (PP 0 3)
+  (PP 2 {0})
+  (VP 1 0)
+  (S 1 0)
+
+(PP\PP)/(PP\PP)
+  1 ((PP{Y}\PP{Y}){Z}/(PP{Y}\PP{Y}){Z}<1>){_}
+  (NP 0 1)
+  (PP {1} 0)
+
+(S[dcl]/S[dcl])/NP
+  2 ((S[dcl]{_}/S[dcl]{Y}<1>){_}/NP{Z}<2>){_}
+  (VP 0)
+  (S 0 2)
+  (S {0} 1)
+
+(PP/(S[ng]\NP))/NP
+  2 ((PP{_}/(S[ng]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  {(TEMP 0 2)}
+  (PP >0 (S >0 1))
+
+S[qem]/(S[dcl]\NP)
+  1 (S[qem]{_}/(S[dcl]{Y}<1>\NP{Z}){Y}){_}
+  (WHNP 0)
+  (SBAR 0 1)
+
+S[poss]/S[dcl]
+  1 (S[poss]{_}/S[dcl]{Y}<1>){_}
+  (S 0 1)
+
+((S\NP)\(S\NP))/S[em]
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/S[em]{W}<2>){_}
+  (SBAR 0 {2})
+  (VP {1} 0)
+  (S 1 0)
+
+(N/N)/(S[asup]\NP)
+  2 ((N{Y}/N{Y}<1>){_}/(S[asup]{Z}<2>\NP{W}){Z}){_}
+  (QP 0 {2})
+  (QP {0} {1})
+
+conj\conj
+  1 (conj{Y}\conj{Y}<1>){_}
+  (CONJP {1} 0)
+
+((NP\NP)/(S[ng]\NP))/NP
+  3 (((NP{Y}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  (PP 0 3)
+  (PP >{0} (S >{0} 2))
+  (NP {1} 0) arg:(NP ...):
+  (NP 1 0) arg:default:
+
+((S[adj]\NP)\(S[adj]\NP))/(S[adj]\NP)
+  2 (((S[adj]{Y}\NP{Z}){Y}\(S[adj]{Y}<1>\NP{Z}){Y}){_}/(S[adj]{W}<2>\NP{V}){W}){_}
+  (PP 0 (ADVP 3))
+  (ADJP 2 0)
+  (S 1 0)
+
+((S[dcl]\NP[expl])/(NP\NP))/NP
+  3 (((S[dcl]{_}\NP[expl]{Y}<1>){_}/(NP{Z}\NP{Z}){W}<2>){_}/NP{V}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(NP/NP)/NP
+  2 ((NP{Y}/NP{Y}<1>){_}/NP{Z}<2>){_}
+  (PP 0 2)
+  (RRC 0 1)
+
+((S[pt]\NP)/(S[adj]\NP))/NP
+  3 (((S[pt]{_}\NP{Y}<1>){_}/(S[adj]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2)) arg:ADVP:
+  (VP >0 (S >0 (ADJP 2))) arg:default:
+  (S 1 0)
+
+((S\NP)\(S\NP))/(S[to]\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[to]{W}<2>\NP{V}){W}){_}
+  (ADVP 0 1) POS:RB
+  (ADJP 0 1) POS:JJ
+  (SBAR 0 1) POS:default
+  (VP {1} 0)
+  (S 1 0)
+
+(S[dcl]\NP)/S
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/S{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S/S)\(S/S)
+  1 ((S[X]{Y}/S[X]{Y}){Z}\(S[X]{Y}/S[X]{Y}){Z}<1>){_}
+  (ADVP {1} 0)
+  (S* 0 {1})
+
+(((S\NP)\(S\NP))\NP)/S[dcl]
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}\NP{W}<2>){_}/S[dcl]{V}<3>){_}
+  (SBAR 0 3)
+  (SBAR 2 {0})
+  (VP {1} 0)
+  (S 1 0)
+
+((S[adj]\NP)/(S[to]\NP))/(S[adj]\NP)
+  2 (((S[adj]{Y}\NP{Z}){Y}/(S[to]{W}<2>\NP{Z}){W}){_}/(S[adj]{Y}<1>\NP{Z}){Y}){_}
+  (ADJP 0 2)
+  (ADJP {0} 1)
+  (S 1 0)
+
+(N/N)/NP
+  2 ((N{Y}/N{Y}<1>){_}/NP{Z}<2>){_}
+  (N 0 2)
+  (N {0} {1})
+
+(S[ng]\NP)/(S[ng]\NP)
+  2 ((S[ng]{_}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(((S[dcl]\NP)/PP)/PP)/NP
+  4 ((((S[dcl]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/PP{W}<3>){_}/NP{V}<4>){_}
+  (VP 0 4)
+  (VP {0} 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[dcl]\NP)/NP)/(S[adj]\NP)
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[b]\NP)/NP)/PP
+  3 (((S[b]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+S[qem]/(S[dcl]/NP)
+  1 (S[qem]{_}/(S[dcl]{Y}<1>/NP{Z}){Y}){_}
+  (WHNP 0)
+  (SBAR 0 1)
+
+(S[pss]\NP)/(PP/NP)
+  2 ((S[pss]{_}\NP{Y}<1>){_}/(PP{Z}<2>/NP{W}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(((S\NP)\(S\NP))/(S[to]\NP))/N
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[to]{W}<2>\NP{V}){W}){_}/N{U}<3>){_}
+  (SBAR 0 {3})
+  (SBAR {0} 2)
+  (VP {1} 0)
+  (S 1 0)
+
+(S[dcl]\(S[ng]\NP))/NP
+  2 ((S[dcl]{_}\(S[ng]{Y}<1>\NP{Z}){Y}){_}/NP{W}<2>){_}
+  (VP 0)
+  (SINV 0 2)
+  (SINV 1 {0})
+
+((S[dcl]\NP[expl])/S[qem])/(S[adj]\NP)
+  3 (((S[dcl]{_}\NP[expl]{Y}<1>){_}/S[qem]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  {(TEMP 0)}
+  (VP 0 3) arg:ADVP:
+  (VP 0 (ADJP 3)) arg:default:
+  (VP {0} 2)
+  (S 1 0)
+
+((S\NP)/(S\NP))/(S[adj]\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[adj]{W}<2>\NP{Z*}){W}){_}
+  (ADJP 0 2)
+  (VP 0 1)
+  (S 1 0)
+
+((S[dcl]\NP[expl])/(S[to]\NP))/NP
+  3 (((S[dcl]{_}\NP[expl]{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/NP{V}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[b]\NP)/PP)/(S[adj]\NP)
+  3 (((S[b]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((NP/NP)/(NP/NP))\(S[adj]\NP)
+  2 (((NP{Y}/NP{Y}){Z}/(NP{Y}/NP{Y}){Z}<1>){_}\(S[adj]{W}<2>\NP{V}){W}){_}
+  (QP {2} 0)
+  (ADJP {0} 1)
+  (NP 0 {1})
+
+(S[qem]/(S[dcl]/(S[adj]\NP)))/(S[adj]\NP)
+  2 ((S[qem]{_}/(S[dcl]{Y}<1>/(S[adj]{Z}\NP{W}){Z}){Y}){_}/(S[adj]{Z}<2>\NP{V}){Z}){_}
+  (WHADVP 0 2)
+  (SBAR 0 1)
+
+((S\NP)/(S\NP))/(S[ng]\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[ng]{W}<2>\NP{Z*}){W}){_}
+  (ADVP 0 2)
+  (VP 0 {1})
+  (S 1 0)
+
+((S\NP)/(S\NP))\(S[adj]\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}<1>\NP{Z}){Y}){_}\(S[adj]{W}<2>\NP{V}){W}){_}
+  (ADVP 2 0)
+  (VP 0 1)
+  (S 1 0)
+
+((S[adj]\NP)\(S[adj]\NP))/(S[ng]\NP)
+  2 (((S[adj]{Y}\NP{Z}){Y}\(S[adj]{Y}<1>\NP{Z}){Y}){_}/(S[ng]{W}<2>\NP{V}){W}){_}
+  (PP 0 (S 2))
+  (ADJP 1 0)
+  (S 1 0)
+
+((S\NP)\(S\NP))/S[qem]
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/S[qem]{W}<2>){_}
+  (PP 0 2)
+  (VP {1} 0)
+  (S 1 0)
+
+((S[adj]\NP)\(S[adj]\NP))/((S[adj]\NP)\(S[adj]\NP))
+  1 (((S[adj]{Y}\NP{Z}){Y}\(S[adj]{Y}\NP{Z}){Y}){W}/((S[adj]{Y}\NP{Z}){Y}\(S[adj]{Y}\NP{Z}){Y}){W}<1>){_}
+  (ADVP 0)
+  (PP 0 {1})
+  (ADJP {1} 0)
+  (S 1 0)
+
+(S[dcl]/(S[b]\NP))/NP
+  2 ((S[dcl]{_}/(S[b]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  {(TEMP 0 1)}
+  (S 0 1)
+
+S[to]\NP
+  1 (S[to]{_}\NP{Y}<1>){_}
+  (VP 0)
+  (S 1 0)
+
+(S[q]/NP)/NP
+  2 ((S[q]{_}/NP{Y}<1>){_}/NP{Z}<2>){_}
+  (SQ 0 2)
+  (SQ {0} 1)
+
+((S[dcl]\S[dcl])\NP)/NP
+  3 (((S[dcl]{_}\S[dcl]{Y}<1>){_}\NP{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (S 2 0)
+  (S {1} {0})
+
+((NP\NP)/(S[to]\NP))/NP
+  3 (((NP{Y}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (SBAR >0 (S >0 {2})) arg:S:
+  (SBAR >0 (S >0 2)) arg:default:
+  (NP 1 0)
+
+(S/S)/(S[dcl]\NP)
+  2 ((S[X]{Y}/S[X]{Y}<1>){_}/(S[dcl]{Z}<2>\NP{W}){Z}){_}
+  (WHNP 0) POS:WP
+  {(TEMP 0)} POS:default
+  (PP 0 2)
+  (S* 0 {1})
+
+((S[b]\NP)/PP)/PP
+  3 (((S[b]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(N/N)/(S[adj]\NP)
+  2 ((N{Y}/N{Y}<1>){_}/(S[adj]{Z}<2>\NP{W}){Z}){_}
+  (PRN 0 1)
+  (NP 0 {1})
+
+(((S\NP)\(S\NP))/((S\NP)\(S\NP)))/(S[asup]\NP)
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<2>){_}/(S[asup]{V}<1>\NP{U}){V}){_}
+  (ADVP 0 2)
+  (PP 0 {1})
+  (VP {1} 0)
+  (S 1 0)
+
+((S\NP)\(S\NP))/(S[dcl]/NP)
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[dcl]{W}<2>/NP{V}){W}){_}
+  (WHNP 0)
+  (SBAR 0 3)
+  (VP {2} 0)
+  (S 1 0)
+
+(NP/NP)/(S[asup]\NP)
+  2 ((NP{Y}/NP{Y}<1>){_}/(S[asup]{Z}<2>\NP{W}){Z}){_}
+  (ADVP 0 {2})
+  (NP 0 {1})
+
+((NP\NP)/(NP\NP))/((NP\NP)/(NP\NP))
+  1 (((NP{Y}\NP{Y}){Z}/(NP{Y}\NP{Y}){Z}){W}/((NP{Y}\NP{Y}){Z}/(NP{Y}\NP{Y}){Z}){W}<1>){_}
+  (ADVP 0 1)
+  (ADVP 0 1)
+  (NP 1 0)
+
+((N/N)\(N/N))/N
+  2 (((N{Y}/N{Y}){Z}\(N{Y}/N{Y}){Z}<2>){_}/N{W}<1>){_}
+  (N 0 {2})
+  (N {1} {0})
+  (N {0} {1})
+
+((S[dcl]\NP)/(S[pss]\NP))/NP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/(S[pss]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(NP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+((S[dcl]\NP[expl])/S[for])/(S[adj]\NP)
+  3 (((S[dcl]{_}\NP[expl]{Y}<1>){_}/S[for]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  {(TEMP 0)}
+  (VP 0 3) arg:ADVP:
+  (VP 0 (ADJP 3)) arg:default:
+  (VP {0} 2)
+  (S 1 0)
+
+(NP/NP)\(S[adj]\NP)
+  2 ((NP{Y}/NP{Y}<1>){_}\(S[adj]{Z}<2>\NP{W}){Z}){_}
+  {(TEMP {2} 0)}
+  (NP 0 {1})
+
+S[wq]/(S[q]/NP)
+  1 (S[wq]{_}/(S[q]{Y}<1>/NP{Z}){Y}){_}
+  (WHNP 0)
+  (SBARQ 0 1)
+
+((S/S)\(S/S))/S[dcl]
+  2 (((S[X]{Y}/S[X]{Y}){Z}\(S[X]{Y}/S[X]{Y}){Z}<2>){_}/S[dcl]{W}<1>){_}
+  (SBAR 0 3)
+  (ADVP 2 0)
+  (S* 0 {1})
+
+((S/S)\(S/S))/NP
+  2 (((S[X]{Y}/S[X]{Y}){Z}\(S[X]{Y}/S[X]{Y}){Z}<2>){_}/NP{W}<1>){_}
+  (PP 0 2)
+  (S 1 0)
+  (S* 0 {1})
+
+(S[qem]/(S[dcl]\NP))/N
+  2 ((S[qem]{_}/(S[dcl]{Y}<1>\NP{Z*}){Y}){_}/N{Z}<2>){_}
+  (WHNP 0 {2})
+  (SBAR 0 1)
+
+((S[pss]\NP)/PP)/PP
+  3 (((S[pss]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S\NP)/(S\NP))/(S[pss]\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[pss]{W}<2>\NP{V}){W}){_}
+  (WHADVP 0)
+  (SBAR 0 (S 2))
+  (VP 0 1)
+  (S 1 0)
+
+((S\NP)\(S\NP))/S[inv]
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/S[inv]{W}<2>){_}
+  (SBAR 0 2)
+  (VP {1} 0)
+  (S 1 0)
+
+(((S\NP)\(S\NP))/(S[b]\NP))/NP
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[b]{W}<2>\NP{V*}){W}){_}/NP{V}<3>){_}
+  ((((S\NP)\(S\NP))/(S\NP))/NP 0 3)
+  ((((S\NP)\(S\NP))/(S\NP))/NP 0 2)
+  ((((S\NP)\(S\NP))/(S\NP))/NP 1 0)
+
+((S\NP)\(S\NP))/(S[b]\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[b]{W}<2>\NP{Z*}){W}){_}
+  (PP 0 2)
+  (VP {1} 0)
+  (S 1 0)
+
+((S[ng]\NP)/(S[ng]\NP))/NP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{Y*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+((S[ng]\NP)/PP)/PP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[dcl]\NP)/(S[to]\NP))/PP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/PP{V}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[adj]\NP)/PP)/PP
+  3 (((S[adj]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(S\S)/(S\S)
+  1 ((S[X]{Y}\S[X]{Y}){Z}/(S[X]{Y}\S[X]{Y}){Z}<1>){_}
+  (ADVP 0) POS:RB
+  {(TEMP 0)} POS:default
+  (SBAR 0 1) POS:RB
+  (PP 0 {1}) POS:IN
+  (NP 0 {1}) POS:NN
+  (NP 0 1) POS:default
+  (S* {1} 0)
+
+(((S\NP)\(S\NP))/(S[to]\NP))/NP
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[to]{W}<2>\NP{V*}){W}){_}/NP{V}<3>){_}
+  (VP 0 4)
+  (SBAR >{0} (S >{0} 3))
+  (VP {2} 0)
+  (S 1 0)
+
+((((S\NP)\(S\NP))/((S\NP)\(S\NP)))/(((S\NP)\(S\NP))/((S\NP)\(S\NP))))\(S[adj]\NP)
+  2 (((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}){V}/(((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}){V}<2>){_}\(S[adj]{U}<1>\NP{T}){U}){_}
+  (NP 5 0)
+  (QP {0} {4})
+  (NP 0 {3})
+  (VP {2} 0)
+  (S 1 0)
+
+((S[b]\NP)/(S[pss]\NP))/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}/(S[pss]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(NP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+((S[adj]\NP)/(S[adj]\NP))/N
+  2 (((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}<1>\NP{Z}){Y}){_}/N{W}<2>){_}
+  (ADVP 0 {2})
+  (VP 0 {1})
+  (S 1 0)
+
+N/S[for]
+  1 (N{_}/S[for]{Y}<1>){_}
+  (NP 0 1)
+
+(S\S)/PP
+  2 ((S[X]{Y}\S[X]{Y}<1>){_}/PP{Z}<2>){_}
+  (VP 0 2)
+  (S* 1 0)
+
+(((S\NP)\(S\NP))/(S[pt]\NP))/NP
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[pt]{W}<2>\NP{V}){W}){_}/NP{U}<3>){_}
+  (S 0 4)
+  (SBAR >{0} (S >{0} 3))
+  (VP {2} 0)
+  (S 1 0)
+
+((S[dcl]\NP)/(S[adj]\NP))/PP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/(S[adj]{Z}<2>\NP{Y*}){Z}){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[b]\NP)/(S[to]\NP))/(S[adj]\NP)
+  3 (((S[b]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/(S[adj]{V}<3>\NP{U}){V}){_}
+  {(TEMP 0)}
+  (VP 0 3) arg:ADVP:
+  (VP 0 (ADJP 3)) arg:default:
+  (VP {0} 2)
+  (S 1 0)
+
+(S/S)/(S[asup]\NP)
+  2 ((S[X]{Y}/S[X]{Y}<1>){_}/(S[asup]{Z}<2>\NP{W}){Z}){_}
+  (PP 0 2)
+  (S* 0 {1})
+
+(S[q]/(S[ng]\NP))/NP
+  2 ((S[q]{_}/(S[ng]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  {(TEMP 0 2)}
+  (SQ 0 1)
+
+((S[pt]\NP)/(S[b]\NP))/NP
+  3 (((S[pt]{_}\NP{Y}<1>){_}/(S[b]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(NP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+(S[dcl]\(S[pss]\NP))/NP
+  2 ((S[dcl]{_}\(S[pss]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  (VP 0)
+  {(TEMP 0 2)}
+  (SINV 1 0)
+
+(((S[dcl]\NP)/(S[to]\NP))/(S[adj]\NP))/NP[expl]
+  4 ((((S[dcl]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/(S[adj]{V}<3>\NP{U}){V}){_}/NP[expl]{T}<4>){_}
+  (VP 0 4)
+  (VP {0} (ADJP 3))
+  (VP {0} 2)
+  (S 1 0)
+
+(PP/PP)/(PP/PP)
+  1 ((PP{Y}/PP{Z}){W}/(PP{Y}/PP{Z}){W}<1>){_}
+  (ADVP 0)
+  (PP 0 {2})
+  (PP 0 1)
+
+((NP\NP)\NP)/NP
+  3 (((NP{Y}\NP{Y}<1>){_}\NP{Z}<2>){_}/NP{W}<3>){_}
+  (NP 0 3)
+  (PP 2 {0})
+  (NP 1 0)
+
+(S[q]/(S[adj]\NP))/NP
+  2 ((S[q]{_}/(S[adj]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  (VP 0 2)
+  (VP {0} 1) arg:ADVP:
+  (VP {0} (ADJP 1)) arg:default:
+
+((S[pt]\NP)/(S[ng]\NP))/NP
+  3 (((S[pt]{_}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(NP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+(((S\NP)\(S\NP))\((S\NP)\(S\NP)))/PP
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<1>){_}/PP{V}<2>){_}
+  {(TEMP 0 4)}
+  (ADVP 3 0)
+  (VP {2} 0)
+  (S 1 0)
+
+S\NP
+  1 (S{_}\NP{Y}<1>){_}
+  (VP 0)
+  (S 1 0)
+
+((S[b]\NP)/S[qem])/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}/S[qem]{Z}<2>){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP 0 (SBAR 2))
+  (S 1 0)
+
+((S[b]\NP)/S[em])/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(S[adj]\NP)/(S[ng]\NP)
+  2 ((S[adj]{_}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(NP/(S[dcl]/NP))/N
+  2 ((NP{Y}/(S[dcl]{Z}<1>/NP{Y*}){Z}){_}/N{Y}<2>){_}
+  (WHNP 0 {2})
+  (SBAR 0 1)
+
+((NP\NP)\(NP\NP))/(S[dcl]\NP)
+  2 (((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}<2>){_}/(S[dcl]{W}<1>\NP{V}){W}){_}
+  (WHNP 0)
+  (SBAR 0 (S 3))
+  (NP 2 0)
+  (NP 1 0)
+
+((NP[nb]/N)\(NP[nb]/N))/(NP[nb]/N)
+  3 (((NP[nb]{Y}/N{Y}<1>){_}\(NP[nb]{Z}/N{Z}){W}<2>){_}/(NP[nb]{V}/N{V}){U}<3>){_}
+  {(TEMP 0 3)}
+  (QP {2} 0)
+  (NP 0 {1})
+
+(N/N)\NP
+  2 ((N{Y}/N{Y}<1>){_}\NP{Z}<2>){_}
+  (ADJPP 2 0)
+  (NP 0 {1})
+
+((N/N)\(N/N))/(S[adj]\NP)
+  2 (((N{Y}/N{Y}){Z}\(N{Y}/N{Y}){Z}<2>){_}/(S[adj]{W}<1>\NP{V}){W}){_}
+  (PP 0 (ADJP 3))
+  (ADJP 2 0)
+  (N 0 {1})
+
+(S[pt]\NP)/(S[b]\NP)
+  2 ((S[pt]{_}\NP{Y}<1>){_}/(S[b]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[pss]\NP)/S[dcl]
+  2 ((S[pss]{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S\NP)\(S\NP))/S[poss]
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/S[poss]{W}<2>){_}
+  (ADVP 0 2)
+  (VP {1} {0})
+  (S 1 0)
+
+(((S\NP)\(S\NP))\((S\NP)\(S\NP)))/((S\NP)\(S\NP))
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){_}\((S{Y}\NP{Z}){Y}\(S{Y}\NP{Z}){Y}){W}<1>){_}/((S{U}\NP{Z}){U}\(S{U}\NP{Z}){U}){V}<2>){_}
+  (ADVP 0 2)
+  (ADVP 1 {0})
+  (VP {1} 0)
+  (S 1 0)
+
+((S[dcl]\NP)/S[qem])/NP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/S[qem]{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 1)
+  (VP {0} 2)
+  (S 1 0)
+
+PP/S[dcl]
+  1 (PP{_}/S[dcl]{Y}<1>){_}
+  (SBAR 0 1)
+
+(S[pss]\NP)/S[qem]
+  2 ((S[pss]{_}\NP{Y}<1>){_}/S[qem]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(((S\NP)\(S\NP))/(S[pss]\NP))/NP
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[pss]{W}<2>\NP{V}){W}){_}/NP{U}<3>){_}
+  (S 0 3)
+  (SBAR >{0} (S >{0} 2))
+  (S 1 0)
+
+(S[ng]\NP)/S[for]
+  2 ((S[ng]{_}\NP{Y}<1>){_}/S[for]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[ng]\NP)/(S[b]\NP)
+  2 ((S[ng]{_}\NP{Y}<1>){_}/(S[b]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[dcl]\NP)/S[wq]
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/S[wq]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[dcl]\NP)\NP)/(S[b]\NP)
+  3 (((S[dcl]{_}\NP{Y}<1>){_}\NP{Z}<2>){_}/(S[b]{W}<3>\NP{V}){W}){_}
+  (VP 0 3)
+  (S 2 0)
+  (S 1 0)
+
+(S[dcl]/NP)/NP
+  2 ((S[dcl]{_}/NP{Y}<1>){_}/NP{Z}<2>){_}
+  (VP 0)
+  {(TEMP 0 2)}
+  (S 0 1)
+
+((NP\NP)\(NP\NP))/S[dcl]
+  2 (((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}<2>){_}/S[dcl]{W}<1>){_}
+  (WHADVP 0)
+  (SBAR 0 2)
+  (NP {1} 0)
+  (NP {1} 0) arg:(NP PP):
+  (NP 1 0) arg:default:
+
+((S/S)/(S[pt]\NP))/NP
+  3 (((S[X]{Y}/S[X]{Y}<1>){_}/(S[pt]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  (NP 0 3)
+  (SINV {0} 2)
+  (S* 0 {1})
+
+((S[ng]\NP)/PP)/(S[adj]\NP)
+  3 (((S[ng]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/(S[adj]{W}<3>\NP{Y*}){W}){_}
+  {(TEMP 0)}
+  (VP 0 3) arg:ADVP:
+  (VP 0 (ADJP 3)) arg:default:
+  (VP {0} 2)
+  (VP 1 0)
+
+(S[dcl]\(S[b]\NP))/NP
+  2 ((S[dcl]{_}\(S[b]{Y}<1>\NP{Z}){Y}){_}/NP{W}<2>){_}
+  (VP 0)
+  (VP 0 2)
+  (S 1 0)
+
+((S[dcl]\NP)/(S[to]\NP))/(S[adj]\NP)
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/(S[adj]{V}<3>\NP{U}){V}){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[b]\NP)/(S[pt]\NP))/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}/(S[pt]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(NP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+((S[b]\NP)/S[for])/(S[adj]\NP)
+  3 (((S[b]{_}\NP{Y}<1>){_}/S[for]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S/S)/(S[adj]\NP))/NP
+  3 (((S[X]{Y}/S[X]{Y}<1>){_}/(S[adj]{Z}<2>\NP{W}){Z}){_}/NP{V}<3>){_}
+  (SBAR 0 3)
+  (SBAR {0} 2) arg:ADVP:
+  (SBAR {0} (ADJP 2)) arg:default:
+  (SBAR {0} 1)
+
+(S[pss]\NP)/(S[ng]\NP)
+  2 ((S[pss]{_}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(((S\NP)\(S\NP))\((S\NP)\(S\NP)))/(S[adj]\NP)
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<1>){_}/(S[adj]{V}<2>\NP{U}){V}){_}
+  (PP 0 4)
+  (ADVP 3 0)
+  (VP 2 0)
+  (S 1 0)
+
+((S[dcl]\NP[expl])/S[em])/NP
+  3 (((S[dcl]{_}\NP[expl]{Y}<1>){_}/S[em]{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S/S)/(S/S))/NP
+  2 (((S[X]{Y}/S[X]{Y}){Z}/(S[X]{Y}/S[X]{Y}){Z}<1>){_}/NP{W}<2>){_}
+  (PP 0 2)
+  (PP 0 1)
+  (S* 0 {1})
+
+(S\S)/S[q]
+  2 ((S[X]{Y}\S[X]{Y}<1>){_}/S[q]{Z}<2>){_}
+  (SQ 0 2)
+  (S* {1} 0)
+
+((S/S)/(S[b]\NP))/NP
+  3 (((S[X]{Y}/S[X]{Y}<1>){_}/(S[b]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (SBAR 0 2)
+  (S* 0 {1})
+
+((S/S)\NP)/NP
+  3 (((S[X]{Y}/S[X]{Y}<1>){_}\NP{Z}<2>){_}/NP{W}<3>){_}
+  (PP 0 3)
+  (PP 2 {0})
+  (S* 0 {1})
+
+(S[pt]\NP)/S[qem]
+  2 ((S[pt]{_}\NP{Y}<1>){_}/S[qem]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[pss]\NP)/(S[pss]\NP)
+  2 ((S[pss]{_}\NP{Y}<1>){_}/(S[pss]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[dcl]\NP[expl])/(S[pt]\NP)
+  2 ((S[dcl]{_}\NP[expl]{Y}<1>){_}/(S[pt]{Z}<2>\NP{W}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[dcl]\NP[expl])/S[em])/PP
+  3 (((S[dcl]{_}\NP[expl]{Y}<1>){_}/S[em]{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  {(TEMP 0 2)}
+  (S 1 0)
+
+((S[b]\NP)/S[dcl])/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}/NP{W}<3>){_}
+  {(TEMP 0 3)}
+  (VP 0 (SBAR 2))
+  (S 1 0)
+
+(S[adj]\NP)/S[for]
+  2 ((S[adj]{_}\NP{Y}<1>){_}/S[for]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[adj]\NP)\NP)/PP
+  3 (((S[adj]{_}\NP{Y}<1>){_}\NP{Z}<2>){_}/PP{W}<3>){_}
+  {(TEMP 0 3)}
+  (ADVP 2 0)
+  (S 1 0)
+
+(PP\PP)/N
+  2 ((PP{Y}\PP{Y}<1>){_}/N{Z}<2>){_}
+  (NP 0 {2})
+  (PP {1} {0})
+
+((NP\NP)\(NP\NP))\NP
+  2 (((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}<2>){_}\NP{W}<1>){_}
+  (ADVP 3 0)
+  (PP {2} 0)
+  (NP {1} 0)
+
+(S[wq]/(S[q]/NP))/N
+  2 ((S[wq]{_}/(S[q]{Y}<1>/NP{Z*}){Y}){_}/N{Z}<2>){_}
+  (WHNP 0 {2})
+  (SBARQ 0 (SQ 1))
+
+((S/S)\NP)/S[dcl]
+  3 (((S[X]{Y}/S[X]{Y}<1>){_}\NP{Z}<2>){_}/S[dcl]{W}<3>){_}
+  {(TEMP 0 3)}
+  (SBAR 2 0)
+  (S* 0 {1})
+
+((S[qem]/(S[dcl]\NP))/N)/(S[adj]\NP)
+  3 (((S[qem]{_}/(S[dcl]{Y}<1>\NP{Z}){Y}){_}/N{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (WHADJP 0 3)
+  (WHNP 0 {2})
+  (SBAR 0 (S 1))
+
+((S\NP)\(S\NP))/S
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/S{W}<2>){_}
+  (S 0 {3})
+  (VP {2} 0)
+  (S 1 0)
+
+((S[ng]\NP)/NP)/PP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+S[dcl]/S[inv]
+  1 (S[dcl]{_}/S[inv]{Y}<1>){_}
+  (ADVP 0)
+  (SINV 0 {1})
+
+(((S[b]\NP)/S[for])/(S[adj]\NP))/NP[expl]
+  4 ((((S[b]{_}\NP{Y}<1>){_}/S[for]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}/NP[expl]{U}<4>){_}
+  (VP 0 4)
+  (VP {0} (ADJP 3))
+  (VP {0} 2)
+  (S 1 0)
+
+(((S[adj]\NP)/(S[adj]\NP))/((S[adj]\NP)/(S[adj]\NP)))/(((S[adj]\NP)/(S[adj]\NP))/((S[adj]\NP)/(S[adj]\NP)))
+  1 ((((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}\NP{Z}){Y}){W}/((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}\NP{Z}){Y}){W}){V}/(((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}\NP{Z}){Y}){W}/((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}\NP{Z}){Y}){W}){V}<1>){_}
+  (NP 0 4)
+  (NP 0 3)
+  (ADJP 0 2)
+  (S 1 0)
+
+NP/((S[to]\NP)/NP)
+  1 (NP{_}/((S[to]{Y}<1>\NP{Z}){Y}/NP{W}){Y}){_}
+  (SBAR (WHNP 0) 1)
+
+(NP/(S[dcl]\NP))/N
+  2 ((NP{_}/(S[dcl]{Y}<1>\NP{Z*}){Y}){_}/N{Z}<2>){_}
+  (WHNP 0 {2})
+  (SBAR 0 1)
+
+(NP/NP)/(S[adj]\NP)
+  2 ((NP{Y}/NP{Y}<1>){_}/(S[adj]{Z}<2>\NP{W}){Z}){_}
+  (ADJP 0 2)
+  (NP 0 1)
+
+((NP[nb]/N)/PP)/(S[adj]\NP)
+  3 (((NP[nb]{Y}/N{Y}<1>){_}/PP{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (NP 0 3)
+  (NP {0} 2)
+  (NP 0 1)
+
+(N\N)/(N\N)
+  1 ((N{Y}\N{Y}){Z}/(N{Y}\N{Y}){Z}<1>){_}
+  (PP (ADVP 0) {2}) POS:RB
+  (NAC 0 {2}) POS:default
+  (N 1 0)
+
+(S\S)/(S[ng]\NP)
+  2 ((S[X]{Y}\S[X]{Y}<1>){_}/(S[ng]{Z}<2>\NP{W}){Z}){_}
+  (PP 0 (S 2))
+  (SBAR 1 0)
+
+((S/S)/PP)/NP
+  3 (((S[X]{Y}/S[X]{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}
+  (PP 0 3)
+  (SBAR >{0} (S >{0} 2))
+  (S* 0 {1})
+
+((S[qem]/(S[dcl]/NP))/N)/(S[adj]\NP)
+  3 (((S[qem]{_}/(S[dcl]{Y}<1>/NP{Z*}){Y}){_}/N{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (WHADVP 0 3)
+  (WHNP 0 {2})
+  (SBAR 0 1)
+
+((S\NP)\(S\NP))/S[ng]
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/S[ng]{W}<2>){_}
+  (PP 0 3)
+  (VP {1} 0)
+  (S 1 0)
+
+(((S\NP)\(S\NP))/NP)/NP
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/NP{W}<2>){_}/NP{V}<3>){_}
+  (PP 0 4)
+  (PP {0} 3)
+  (VP {2} 0)
+  (S 1 0)
+
+((S\NP)/(S\NP))\NP
+  2 (((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}<1>\NP{Z}){Y}){_}\NP{W}<2>){_}
+  (ADVP 2 0)
+  (S 0 1)
+  (S 1 {0})
+
+(S\NP)/NP
+  2 ((S{_}\NP{Y}<1>){_}/NP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[ng]\NP)/(S[pss]\NP))/NP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/(S[pss]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(NP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+S[frg]/NP
+  1 (S[frg]{_}/NP{Y}<1>){_}
+  (FRAG 0 1)
+
+(S[dcl]\S[wq])/NP
+  2 ((S[dcl]{_}\S[wq]{Y}<1>){_}/NP{Z}<2>){_}
+  (VP 0)
+  (VP 0 2)
+  (S {1} {0})
+
+((S[b]\NP)/(S[to]\NP))/PP
+  3 (((S[b]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/PP{V}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[adj]\NP)\(S[adj]\NP))/(S[pss]\NP)
+  2 (((S[adj]{Y}\NP{Z}){Y}\(S[adj]{Y}<1>\NP{Z}){Y}){_}/(S[pss]{W}<2>\NP{V}){W}){_}
+  (SBAR 0 (S 2))
+  (ADJP 1 0)
+  (S 1 0)
+
+(NP\NP)/(S[to]\NP)
+  2 ((NP{Y}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}
+  {(PP 0 2)}
+  (NP {1} 0)
+
+((S/S)/S[dcl])/(S[adj]\NP)
+  3 (((S[X]{Y}/S[X]{Y}<1>){_}/S[dcl]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (X 0 3)
+  (SBAR 0 2)
+  (S* 0 {1})
+
+(S\S)/(S[dcl]\NP)
+  2 ((S[X]{Y}\S[X]{Y}<1>){_}/(S[dcl]{Z}<2>\NP{W}){Z}){_}
+  (VP 0 2)
+  (S 1 {0})
+
+((S[pss]\NP)/PP)/(S[adj]\NP)
+  3 (((S[pss]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(((S\NP)\(S\NP))\((S\NP)\(S\NP)))/(S[pss]\NP)
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<2>){_}/(S[pss]{V}<1>\NP{U}){V}){_}
+  (SBAR 0 4)
+  (ADVP 3 0)
+  (VP {2} 0)
+  (S 1 0)
+
+((((S\NP)\(S\NP))/((S\NP)\(S\NP)))/(((S\NP)\(S\NP))/((S\NP)\(S\NP))))/(S[asup]\NP)
+  2 (((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}){V}/(((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}){V}<2>){_}/(S[asup]{U}<1>\NP{T}){U}){_}
+  (ADVP 0 5)
+  (ADVP 0 4)
+  (PP 0 {3})
+  (VP {2} 0)
+  (S 1 0)
+
+((S\NP)/(S\NP))\((S\NP)/(S\NP))
+  1 (((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}\NP{Z}){Y}){W}<1>){_}
+  (NP 1 0)
+  (VP 0 {2})
+  (S 3 0)
+
+((S\NP)/(S\NP))/(S[asup]\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[asup]{W}<2>\NP{V}){W}){_}
+  (ADVP 0 2)
+  (VP 0 1)
+  (S 1 0)
+
+((S[ng]\NP)/S[em])/NP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[ng]\NP)/NP)/(S[adj]\NP)
+  3 (((S[ng]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  {(TEMP 0 3)}
+  (VP 0 2)
+  (S 1 0)
+
+(S[dcl]/(S[pt]\NP))/NP
+  2 ((S[dcl]{_}/(S[pt]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  {(TEMP 0 2)}
+  {(TEMP 0 1)}
+
+(((S[dcl]\NP)/S[em])/(S[adj]\NP))/NP[expl]
+  4 ((((S[dcl]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}/NP[expl]{U}<4>){_}
+  {(TEMP 0 4)}
+  {(TEMP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+(S[dcl]\NP[expl])/(S[pss]\NP)
+  2 ((S[dcl]{_}\NP[expl]{Y}<1>){_}/(S[pss]{Z}<2>\NP{W}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(((S[b]\NP)/(S[to]\NP))/(S[adj]\NP))/NP[expl]
+  4 ((((S[b]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/(S[adj]{V}<3>\NP{U}){V}){_}/NP[expl]{T}<4>){_}
+  ((((S\NP)/(S\NP))/(S\NP))/NP 0 4)
+  ((((S\NP)/(S\NP))/(S\NP))/NP 0 3)
+  ((((S\NP)/(S\NP))/(S\NP))/NP 0 2)
+  ((((S\NP)/(S\NP))/(S\NP))/NP 1 0)
+
+S[adj]/S[adj]
+  1 (S[adj]{Y}/S[adj]{Y}<1>){_}
+  (S 0 1)
+
+(PP\PP)/S[dcl]
+  2 ((PP{Y}\PP{Y}<1>){_}/S[dcl]{Z}<2>){_}
+  (SBAR 0 2)
+  (PP 1 0)
+
+(NP\NP)/S[inv]
+  2 ((NP{Y}\NP{Y}<1>){_}/S[inv]{Z}<2>){_}
+  (PP 0 2)
+  (NP 1 0)
+
+(NP\NP)/S
+  2 ((NP{Y}\NP{Y}<1>){_}/S{Z}<2>){_}
+  (PP 0 2)
+  (NP 1 0)
+
+N/NP
+  1 (N{Y}/NP{Y}<1>){_}
+  (Nslash 0)
+  (N {0} 1)
+
+((S/S)/(S[to]\NP))/NP
+  3 (((S[X]{Y}/S[X]{Y}<1>){_}/(S[to]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  (((S/S)/(S\NP))/NP 0 3)
+  (((S/S)/(S\NP))/NP 0 2)
+  (((S/S)/(S\NP))/NP 0 1)
+
+(S\S)/(S[b]\NP)
+  2 ((S[X]{Y}\S[X]{Y}<1>){_}/(S[b]{Z}<2>\NP{W}){Z}){_}
+  (S (VP 0 2))
+  (S 1 0)
+
+(S\S)/N
+  2 ((S[X]{Y}\S[X]{Y}<1>){_}/N{Z}<2>){_}
+  (NP 0 {2})
+  (S* {1} 0)
+
+((S[pt]\NP)/S[em])/NP
+  3 (((S[pt]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}/NP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(((S\NP)/(S\NP))\((S\NP)/(S\NP)))/NP
+  2 ((((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}/(S[X]{Y}\NP{Z}){Y}){W}<2>){_}/NP{V}<1>){_}
+  (PP 0 4)
+  (SBAR {3} 0)
+  {(TEMP 0 2)}
+  (S 1 0)
+
+((S[ng]\NP)/(S[to]\NP))/PP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(S[dcl]\(S[b]\NP))\NP
+  2 ((S[dcl]{_}\(S[b]{Y}<1>\NP{Z}){Y}){_}\NP{W}<2>){_}
+  (VP 0)
+  {(TEMP 2 0))
+  (S 1 0) arg:S:
+  (S (S 1) 0) arg:default:
+
+(S[dcl]\S[b])\NP
+  2 ((S[dcl]{_}\S[b]{Y}<1>){_}\NP{Z}<2>){_}
+  ((S\S)\NP 2 0)
+  ((S\S)\NP 1 0)
+
+((S[dcl]\NP)/(S[pt]\NP))/NP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/(S[pt]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(NP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+((S[dcl]\NP)/S[em])/PP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[dcl]\NP[expl])/(S[to]\NP))/PP
+  3 (((S[dcl]{_}\NP[expl]{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/PP{V}<3>){_}
+  (((S\NP)/(S\NP))/PP 0 3)
+  (((S\NP)/(S\NP))/PP 0 2)
+  (((S\NP)/(S\NP))/PP 1 0)
+
+((S[adj]\NP)/S[dcl])/(S[adj]\NP)
+  3 (((S[adj]{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (ADVP 0 {3})
+  (ADJP 0 2)
+  (VP 1 0)
+
+(NP\NP)/S[q]
+  2 ((NP{Y}\NP{Y}<1>){_}/S[q]{Z}<2>){_}
+  (PP 0 2)
+  (NP 1 {0})
+
+((NP\NP)\(NP\NP))/(NP\NP)
+  2 (((NP{Y}\NP{Y}){_}\(NP{Z}\NP{Z}){W}<1>){_}/(NP{V}\NP{V}){U}<2>){_}
+  (((NP\NP)\(NP\NP))/(NP\NP) 0 2)
+  (((NP\NP)\(NP\NP))/(NP\NP) 1 0)
+
+S[wq]/(S[b]\NP)
+  1 (S[wq]{_}/(S[b]{Y}<1>\NP{Z}){Y}){_}
+  (SBAR 0 1)
+
+((S/S)/(S[pss]\NP))/NP
+  3 (((S[X]{Y}/S[X]{Y}<1>){_}/(S[pss]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  (((S/S)/(S\NP))/NP 0 3)
+  (((S/S)/(S\NP))/NP 0 2)
+  (((S/S)/(S\NP))/NP 0 1)
+
+S/(S[dcl]\NP)
+  1 (S{_}/(S[dcl]{Y}<1>\NP{Z}){Y}){_}
+  (S 0 1)
+
+(((S\NP)\(S\NP))/(S[adj]\NP))/NP
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[adj]{W}<2>\NP{V*}){W}){_}/NP{V}<3>){_}
+  {(TEMP 0 4)}
+  (ADVP >0 (S >0 3))
+  (VP {2} 0)
+  (S 1 0)
+
+(((S\NP)\(S\NP))/PP)/(S[adj]\NP)
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/PP{W}<2>){_}/(S[adj]{V}<3>\NP{U}){V}){_}
+  ((((S\NP)\(S\NP))/PP)/(S\NP) 0 3)
+  ((((S\NP)\(S\NP))/PP)/(S\NP) 0 2)
+  ((((S\NP)\(S\NP))/PP)/(S\NP) 1 0)
+
+(((S[ng]\NP)/PP)/PP)/NP
+  4 ((((S[ng]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/PP{W}<3>){_}/NP{V}<4>){_}
+  (VP 0 4)
+  (VP {0} 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(S[dcl]\S[wq])\NP
+  2 ((S[dcl]{_}\S[wq]{Y}<1>){_}\NP{Z}<2>){_}
+  (VP 0)
+  (S 2 0)
+  (S {1} {0})
+
+(S[dcl]\NP)/S[q]
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/S[q]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[dcl]\NP[expl])/S[dcl])/(S[adj]\NP)
+  3 (((S[dcl]{_}\NP[expl]{Y}<1>){_}/S[dcl]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  {(TEMP 0)}
+  (VP 0 3) arg:ADVP:
+  (VP 0 (ADJP 3)) arg:default:
+  (VP {0} 2)
+  (S 1 0)
+
+((S[b]\NP)/S[for])/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}/S[for]{Z}<2>){_}/NP{W}<3>){_}
+  (((S\NP)/S)/NP 0 3)
+  (((S\NP)/S)/NP 0 2)
+  (((S\NP)/S)/NP 1 0)
+
+((S[adj]\NP)/(S[to]\NP))/PP
+  3 (((S[adj]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{Y*}){Z}){_}/PP{W}<3>){_}
+  (((S\NP)/(S\NP))/PP 0 3)
+  (((S\NP)/(S\NP))/PP 0 2)
+  (((S\NP)/(S\NP))/PP 1 0)
+
+(S[adj]\NP)/S[qem]
+  2 ((S[adj]{_}\NP{Y}<1>){_}/S[qem]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(((S[adj]\NP)\(S[adj]\NP))/((S[adj]\NP)\(S[adj]\NP)))/NP
+  2 ((((S[adj]{Y}\NP{Z}){Y}\(S[adj]{Y}\NP{Z}){Y}){W}/((S[adj]{Y}\NP{Z}){Y}\(S[adj]{Y}\NP{Z}){Y}){W}<2>){_}/NP{V}<1>){_}
+  ((((S\NP)\(S\NP))/((S\NP)\(S\NP)))/NP 0 2)
+  ((((S\NP)\(S\NP))/((S\NP)\(S\NP)))/NP 0 1)
+
+N/S[qem]
+  1 (N{_}/S[qem]{Y}<1>){_}
+  (NP 0 1)
+
+(NP\NP)/S[wq]
+  2 ((NP{Y}\NP{Y}<1>){_}/S[wq]{Z}<2>){_}
+  (PP 0 2)
+  (NP 1 0)
+
+((NP[nb]/N)/(NP[nb]/N))/(S[asup]\NP)
+  2 (((NP[nb]{Y}/N{Y}){Z}/(NP[nb]{Y}/N{Y}){Z}<2>){_}/(S[asup]{W}<1>\NP{V}){W}){_}
+  (((NP/N)/(NP/N))/(S\NP) 0 2)
+  (((NP/N)/(NP/N))/(S\NP) 0 1)
+
+((N/N)/(N/N))/N
+  2 (((N{Y}/N{Y}){Z}/(N{Y}/N{Y}){Z}<2>){_}/N{W}<1>){_}
+  (WP 0 {3})
+  (ADJP 0 {2})
+  (N 0 {1})
+
+(S/S)/S[em]
+  2 ((S{Y}/S{Y}<1>){_}/S[em]{Z}<2>){_}
+  (SBAR 0 2)
+  (S 0 1)
+
+((S[pt]\NP)/NP)/(S[adj]\NP)
+  3 (((S[pt]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (((S\NP)/NP)/(S\NP) 0 3)
+  (((S\NP)/NP)/(S\NP) 0 2)
+  (((S\NP)/NP)/(S\NP) 1 0)
+
+((S[ng]\NP)/S[dcl])/NP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}/NP{W}<3>){_}
+  (((S\NP)/S)/NP 0 3)
+  (((S\NP)/S)/NP 0 2)
+  (((S\NP)/S)/NP 1 0)
+
+S/N
+  1 (S{_}/N{Y}<1>){_}
+  (NP 0 {1})
+
+((S[dcl]\S[dcl])\NP)/(S[pt]\NP)
+  3 (((S[dcl]{_}\S[dcl]{Y}<1>){_}\NP{Z}<2>){_}/(S[pt]{W}<3>\NP{Z*}){W}){_}
+  (((S\S)\NP)/(S\NP) 0 3)
+  (((S\S)\NP)/(S\NP) 2 0)
+  (((S\S)\NP)/(S\NP) 1 0)
+
+((S[dcl]\NP)\NP)/NP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}\NP{Z}<2>){_}/NP{W}<3>){_}
+  (((S\NP)\NP)/NP 0 3)
+  (((S\NP)\NP)/NP 2 0)
+  (((S\NP)\NP)/NP 1 0)
+
+(S[b]\NP)/S[for]
+  2 ((S[b]{_}\NP{Y}<1>){_}/S[for]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(((S[b]\NP)/PP)/NP)/NP
+  4 ((((S[b]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}/NP{V}<4>){_}
+  ((((S\NP)/PP)/NP)/NP 0 4)
+  ((((S\NP)/PP)/NP)/NP 0 3)
+  ((((S\NP)/PP)/NP)/NP 0 2)
+  ((((S\NP)/PP)/NP)/NP 1 0)
+
+((S[adj]\NP)/(S[adj]\NP))/(S[asup]\NP)
+  2 (((S[adj]{Y}\NP{Z}){Y}/(S[adj]{Y}<1>\NP{Z}){Y}){_}/(S[asup]{W}<2>\NP{V}){W}){_}
+  (((S\NP)/(S\NP))/(S\NP) 0 2)
+  (((S\NP)/(S\NP))/(S\NP) 0 1)
+
+N/PP
+  1 (N{_}/PP{Y}<1>){_}
+  (N/PP 0 1)
+
+((NP\NP)/((S[to]\NP)/NP))/NP
+  4 (((NP{Y}\NP{Y}<1>){_}/((S[to]{Z}<2>\NP{W*}){Z}/NP{Y*}<3>){Z}){_}/NP{W}<4>){_}
+  {(TEMP 0 3)}
+  (SBAR >0 (S >0 {2}))
+  (NP {1} 0) arg:(NP PP):
+  (NP 1 0) arg:default:
+
+((NP\NP)\NP)/PP
+  3 (((NP{Y}\NP{Y}<1>){_}\NP{Z}<2>){_}/PP{W}<3>){_}
+  (((NP\NP)\NP)/PP 0 3)
+  (((NP\NP)\NP)/PP 2 0)
+  (((NP\NP)\NP)/PP 1 0)
+
+((NP\NP)\(NP\NP))/N
+  2 (((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}<2>){_}/N{W}<1>){_}
+  (NP 0 {3})
+  (PP {2} 0) arg:PP:
+  (NP 2 0) arg:default:
+  (NP 1 0)
+
+(NP/N)/(NP/N)
+  1 ((NP{Y}/N{Y}){Z}/(NP{Y}/N{Y}){Z}<1>){_}
+  ((NP/N)/(NP/N) 0 1)
+
+(((N/N)/(N/N))\((N/N)/(N/N)))/((N/N)/(N/N))
+  2 ((((N{Y}/N{Y}){Z}/(N{Y}/N{Y}){Z}){_}\((N{Y}/N{Y}){Z}/(N{Y}/N{Y}){Z}){W}<1>){_}/((N{Y}/N{Y}){Z}/(N{Y}/N{Y}){Z}){V}<2>){_}
+  ((((N/N)/(N/N))\((N/N)/(N/N)))/((N/N)/(N/N)) 0 2)
+  ((((N/N)/(N/N))\((N/N)/(N/N)))/((N/N)/(N/N)) 1 0)
+
+S[wq]/S[poss]
+  1 (S[wq]{_}/S[poss]{Y}<1>){_}
+  (S 0 1)
+
+((S/S)/(S/S))/((S/S)/(S/S))
+  1 (((S[X]{Y}/S[X]{Y}){Z}/(S[X]{Y}/S[X]{Y}){Z}){W}/((S[X]{Y}/S[X]{Y}){Z}/(S[X]{Y}/S[X]{Y}){Z}){W}<1>){_}
+  (((S/S)/(S/S))/((S/S)/(S/S)) 0 1)
+
+((S\S)\(S\S))/NP
+  2 (((S[X]{Y}\S[X]{Y}){Z}\(S[X]{Y}\S[X]{Y}){Z}<2>){_}/NP{W}<1>){_}
+  (((S\S)\(S\S))/NP 0 2)
+  (((S\S)\(S\S))/NP 1 0)
+
+(S/S)/(S[b]\NP)
+  2 ((S[X]{Y}/S[X]{Y}<1>){_}/(S[b]{Z}<2>\NP{W}){Z}){_}
+  (PP 0 2)
+  (S* 0 {1})
+
+(S[q]/(S[pt]\NP))/NP
+  2 ((S[q]{_}/(S[pt]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  ((S/(S\NP))/NP 0 2)
+  ((S/(S\NP))/NP 0 1)
+
+(S[q]/(S[dcl]\NP))/NP
+  2 ((S[q]{_}/(S[dcl]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  ((S/(S\NP))/NP 0 2)
+  ((S/(S\NP))/NP 0 1)
+
+S[q]/NP
+  1 (S[q]{_}/NP{Y}<1>){_}
+  (S 0 1)
+
+((S[qem]/S[dcl])\((NP\NP)/NP))/N
+  3 (((S[qem]{_}/S[dcl]{Y}<1>){_}\((NP{Z}\NP{Z}){W}/NP{V}){U}<3>){_}/N{T}<2>){_}
+  (((S/S)\((NP\NP)/NP))/N 0 3)
+  (((S/S)\((NP\NP)/NP))/N 2 0)
+  (((S/S)\((NP\NP)/NP))/N 0 1)
+
+((S[pt]\NP)/(S[to]\NP))/(S[adj]\NP)
+  3 (((S[pt]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/(S[adj]{V}<3>\NP{U}){V}){_}
+  (((S\NP)/(S\NP))/(S\NP) 0 3)
+  (((S\NP)/(S\NP))/(S\NP) 0 2)
+  (((S\NP)/(S\NP))/(S\NP) 1 0)
+
+((S[pt]\NP)/(S[pss]\NP))/NP
+  3 (((S[pt]{_}\NP{Y}<1>){_}/(S[pss]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(NP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+(((S\NP)\(S\NP))\((S\NP)\(S\NP)))/(S[dcl]\NP)
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}\((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<2>){_}/(S[dcl]{V}<1>\NP{U}){V}){_}
+  ((((S\NP)\(S\NP))\((S\NP)\(S\NP)))/(S\NP) 0 2)
+  ((((S\NP)\(S\NP))\((S\NP)\(S\NP)))/(S\NP) 1 0)
+
+(((S\NP)\(S\NP))/((S\NP)\(S\NP)))/N
+  2 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}/((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}\NP{Z}){Y}){W}<2>){_}/N{V}<1>){_}
+  ((((S\NP)\(S\NP))/((S\NP)\(S\NP)))/N 0 2)
+  ((((S\NP)\(S\NP))/((S\NP)\(S\NP)))/N 0 1)
+
+((S\NP)\(S\NP))/(S[asup]\NP)
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/(S[asup]{W}<2>\NP{V}){W}){_}
+  (((S\NP)\(S\NP))/(S\NP) 0 2)
+  (((S\NP)\(S\NP))/(S\NP) 1 0)
+
+(((S\NP)\(S\NP))\NP)/PP
+  3 ((((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}\NP{W}<2>){_}/PP{V}<3>){_}
+  (ADVP 0 3)
+  (ADVP 2 {0})
+  (VP {1} 0)
+  (S 1 0)
+
+((S[ng]\NP)/S[qem])/NP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/S[qem]{Z}<2>){_}/NP{W}<3>){_}
+  (((S\NP)/S)/NP 0 3)
+  (((S\NP)/S)/NP 0 2)
+  (((S\NP)/S)/NP 1 0)
+
+((S[ng]\NP)/(S[pt]\NP))/NP
+  3 (((S[ng]{_}\NP{Y}<1>){_}/(S[pt]{Z}<2>\NP{W*}){Z}){_}/NP{W}<3>){_}
+  {(NP 0 3)}
+  (VP >0 (S >0 2))
+  (S 1 0)
+
+(((S[ng]\NP)/S[for])/(S[adj]\NP))/NP[expl]
+  4 ((((S[ng]{_}\NP{Y}<1>){_}/S[for]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}/NP[expl]{U}<4>){_}
+  ((((S\NP)/S)/(S\NP))/NP 0 4)
+  ((((S\NP)/S)/(S\NP))/NP 0 3)
+  ((((S\NP)/S)/(S\NP))/NP 0 2)
+  ((((S\NP)/S)/(S\NP))/NP 1 0)
+
+S[frg]/(S[adj]\NP)
+  1 (S[frg]{_}/(S[adj]{Y}<1>\NP{Z}){Y}){_}
+  {(TEMP 0)}
+  (FRAG 0 1) arg:ADVP:
+  (FRAG 0 (ADJP 1)) arg:default:
+
+S[em]/(S[dcl]\NP)
+  1 (S[em]{_}/(S[dcl]{Y}<1>\NP{Z}){Y}){_}
+  (SBAR 0 1)
+
+(S[dcl]\S[qem])/PP
+  2 ((S[dcl]{_}\S[qem]{Y}<1>){_}/PP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[dcl]\S[qem])/NP
+  2 ((S[dcl]{_}\S[qem]{Y}<1>){_}/NP{Z}<2>){_}
+  ((S\S)/NP 0 2)
+  ((S\S)/NP 1 0)
+
+((S[dcl]\S[dcl])\NP)/PP
+  3 (((S[dcl]{_}\S[dcl]{Y}<1>){_}\NP{Z}<2>){_}/PP{W}<3>){_}
+  (((S\S)\NP)/PP 0 3)
+  (((S\S)\NP)/PP 2 0)
+  (((S\S)\NP)/PP 1 0)
+
+(S[dcl]\(S[dcl]\NP))/NP
+  2 ((S[dcl]{_}\(S[dcl]{Y}<1>\NP{Z}){Y}){_}/NP{W}<2>){_}
+  ((S\(S\NP))/NP 0 2)
+  ((S\(S\NP))/NP 1 0)
+
+(((S[dcl]\NP)/S[for])/(S[adj]\NP))/NP[expl]
+  4 ((((S[dcl]{_}\NP{Y}<1>){_}/S[for]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}/NP[expl]{U}<4>){_}
+  ((((S\NP)/S)/(S\NP))/NP 0 4)
+  ((((S\NP)/S)/(S\NP))/NP 0 3)
+  ((((S\NP)/S)/(S\NP))/NP 0 2)
+  ((((S\NP)/S)/(S\NP))/NP 1 0)
+
+((S[dcl]\NP)/S[em])/(S[adj]\NP)
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (((S\NP)/S)/(S\NP) 0 3)
+  (((S\NP)/S)/(S\NP) 0 2)
+  (((S\NP)/S)/(S\NP) 1 0)
+
+((S[dcl]\NP)/S[dcl])/PP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/S[dcl]{Z}<2>){_}/PP{W}<3>){_}
+  (((S\NP)/S)/PP 0 3)
+  (((S\NP)/S)/PP 0 2)
+  (((S\NP)/S)/PP 1 0)
+
+(S[dcl]\NP)/S[b]
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/S[b]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[dcl]\NP)\NP
+  2 ((S[dcl]{_}\NP{Y}<1>){_}\NP{Z}<2>){_}
+  (ADVP 2 0)
+  (S 1 0)
+
+(S[dcl]\NP[expl])/(S[to]\NP)
+  2 ((S[dcl]{_}\NP[expl]{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[b]\NP)/S[wq]
+  2 ((S[b]{_}\NP{Y}<1>){_}/S[wq]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+((S[b]\NP)/S[em])/PP
+  3 (((S[b]{_}\NP{Y}<1>){_}/S[em]{Z}<2>){_}/PP{W}<3>){_}
+  {(VP 0 3)}
+  (VP 0 2)
+  (S 1 0)
+
+(((S[b]\NP)/PP)/(S[adj]\NP))/NP
+  4 ((((S[b]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}/NP{U}<4>){_}
+  ((((S\NP)/PP)/(S\NP))/NP 0 4)
+  ((((S\NP)/PP)/(S\NP))/NP 0 3)
+  ((((S\NP)/PP)/(S\NP))/NP 0 2)
+  ((((S\NP)/PP)/(S\NP))/NP 1 0)
+
+((S[b]\NP)\NP)/(S[b]\NP)
+  3 (((S[b]{_}\NP{Y}<1>){_}\NP{Z}<2>){_}/(S[b]{V}<3>\NP{U}){V}){_}
+  (((S\NP)\NP)/(S\NP) 0 3)
+  (((S\NP)\NP)/(S\NP) 2 0)
+  (((S\NP)\NP)/(S\NP) 1 0)
+
+((S[b]\NP)\NP)/NP
+  3 (((S[b]{_}\NP{Y}<1>){_}\NP{Z}<2>){_}/NP{W}<3>){_}
+  (((S\NP)\NP)/NP 0 3)
+  (((S\NP)\NP)/NP 2 0)
+  (((S\NP)\NP)/NP 1 0)
+
+S[as]/S[poss]
+  1 (S[as]{_}/S[poss]{Y}<1>){_}
+  (S 0 1)
+
+((S[adj]\NP)/((S[to]\NP)/NP))/(S[adj]\NP)
+  2 (((S[adj]{Y}\NP{Z}){_}/((S[to]{W}<1>\NP{V}){W}/NP{U}){W}){_}/(S[adj]{Y}<2>\NP{Z}){Y}){_}
+  (((S\NP)/((S\NP)/NP))/(S\NP) 0 2)
+  (((S\NP)/((S\NP)/NP))/(S\NP) 0 1)
+
+((S[adj]\NP)\(S[adj]\NP))/S[inv]
+  2 (((S[adj]{Y}\NP{Z}){Y}\(S[adj]{Y}<1>\NP{Z}){Y}){_}/S[inv]{W}<2>){_}
+  (((S\NP)\(S\NP))/S 0 2)
+  (((S\NP)\(S\NP))/S 1 0)
+
+(NP\NP)/S[b]
+  2 ((NP{Y}\NP{Y}<1>){_}/S[b]{Z}<2>){_}
+  (PP 0 2)
+  (NP 1 0)
+
+((((NP\NP)\(NP\NP))/((NP\NP)\(NP\NP)))\(((NP\NP)\(NP\NP))/((NP\NP)\(NP\NP))))/(((NP\NP)\(NP\NP))/((NP\NP)\(NP\NP)))
+  2 (((((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}){W}/((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}){W}){_}\(((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}){W}/((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}){W}){V}<1>){_}/(((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}){W}/((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}){W}){U}<2>){_}
+  (QP 0 1)
+  (QP 1 {0})
+  (NP 0 1)
+  (NP 1 0)
+  (NP {1} 0)
+
+((NP\NP)\(NP\NP))\((NP\NP)\(NP\NP))
+  1 (((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}){W}\((NP{Y}\NP{Y}){Z}\(NP{Y}\NP{Y}){Z}){W}<1>){_}
+  (((NP\NP)\(NP\NP))\((NP\NP)\(NP\NP)) 1 0)
+
+((NP\NP)/N)\NP
+  3 (((NP{Y}\NP{Y}<1>){_}/N{Z}<2>){_}\NP{W}<3>){_}
+  (((NP\NP)/N)\NP 3 0)
+  (((NP\NP)/N)\NP 0 2)
+  (((NP\NP)/N)\NP 1 0)
+
+((N\N)\(N\N))/NP
+  2 (((N{Y}\N{Y}){Z}\(N{Y}\N{Y}){Z}<2>){_}/NP{W}<1>){_}
+  (((N\N)\(N\N))/NP 0 2)
+  (((N\N)\(N\N))/NP 1 0)
+
+N/N[num]
+  1 (N{_}/N[num]{Y}<1>){_}
+  (Nslash 0)
+  (N (QP {0} {1})) arg:(CD CD):
+  (Nnum {0} {1}) arg:default:
+
+(N/N)/N[num]
+  2 ((N{Y}/N{Y}<1>){_}/N[num]{Z}<2>){_}
+  {(TEMP 0)}
+  (ADJP (QP 0 {2})) arg:(CD CD):
+  (ADJP 0 {2}) arg:default:
+  (N 0 {1})
+
+S[bem]/S[b]
+  1 (S[bem]{_}/S[b]{Y}<1>){_}
+  (S 0 1)
+
+(S[dcl]\NP[thr])/(S[b]\NP)
+  2 ((S[dcl]{_}\NP[thr]{Y}<1>){_}/(S[b]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[dcl]\NP[thr])/(S[pt]\NP)
+  2 ((S[dcl]{_}\NP[thr]{Y}<1>){_}/(S[pt]{Z}<2>\NP{Y*}){Z}){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[dcl]\NP)/S[bem]
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/S[bem]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+NP/(NP\NP)
+  1 (NP{_}/(NP{Y}\NP{Y}){Z}<1>){_}
+  (NP 0 1)
+
+((S\NP)\(S\NP))/N[num]
+  2 (((S[X]{Y}\NP{Z}){Y}\(S[X]{Y}<1>\NP{Z}){Y}){_}/N[num]{W}<2>){_}
+  (NP 0 {2})
+  (VP {1} 0)
+  (S 1 0)
+
+(S[ng]\NP)/S[bem]
+  2 ((S[ng]{_}\NP{Y}<1>){_}/S[bem]{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S/S)/S[inv]
+  2 ((S[X]{Y}/S[X]{Y}<1>){_}/S[inv]{Z}<2>){_}
+  (SINV 0 2)
+  (S 0 1)
+
+(S[dcl]\NP[thr])/NP
+  2 ((S[dcl]{_}\NP[thr]{Y}<1>){_}/NP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[adj]\NP)/N[num]
+  2 ((S[adj]{_}\NP{Y}<1>){_}/N[num]{Z}<2>){_}
+  (QP 0 {2})
+  (S 1 0)
+
+(NP\NP)/N[num]
+  2 ((NP{Y}\NP{Y}<1>){_}/N[num]{Z}<2>){_}
+  (NP 0 {2})
+  (NP 1 0)
+
+((S[wq]/(S[q]/NP))/N)\(S[wq]/(S[q]/NP))
+  3 (((S[wq]{Y}/(S[q]{Z}<1>/NP{W}){Z}){Y}/N{V}<2>){Y}\(S[wq]{Y}<3>/(S[q]{Z*}/NP{W}){Z}){Y}){_}
+  (((S/(S/NP))/N)\(S/(S/NP)) 3 0)
+  (((S/(S/NP))/N)\(S/(S/NP)) 0 2)
+  (((S/(S/NP))/N)\(S/(S/NP)) 0 1)
+
+((S[wq]/(S[dcl]\NP))/N)\(S[wq]/(S[dcl]\NP))
+  3 (((S[wq]{Y}/(S[dcl]{Z}<1>\NP{W}){Z}){Y}/N{V}<2>){Y}\(S[wq]{Y}<3>/(S[dcl]{Z*}\NP{W}){Z}){Y}){_}
+  (((S/(S\NP))/N)\(S/(S\NP)) 3 0)
+  (((S/(S\NP))/N)\(S/(S\NP)) 0 2)
+  (((S/(S\NP))/N)\(S/(S\NP)) 0 1)
+
+(S[wq]/(S[q]/NP))/NP
+  2 ((S[wq]{_}/(S[q]{Y}<1>/NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  ((S/(S/NP))/NP 0 2)
+  ((S/(S/NP))/NP 0 1)
+
+((S[wq]/(S[dcl]\NP))/N)/(NP/N)
+  3 (((S[wq]{_}/(S[dcl]{Y}<1>\NP{Z*}){Y}){_}/N{Z}<2>){_}/(NP{W}/N{W}){V}<3>){_}
+  (((S/(S\NP))/N)/(NP/N) 0 3)
+  (((S/(S\NP))/N)/(NP/N) 0 2)
+  (((S/(S\NP))/N)/(NP/N) 0 1)
+
+((S[wq]/S[q])\(S[wq]/S[q]))/NP
+  2 (((S[wq]{Y}/S[q]{Y}){Z}\(S[wq]{Y}/S[q]{Y}){Z}<1>){_}/NP{W}<2>){_}
+  (((S/S)\(S/S))/NP 0 2)
+  (((S/S)\(S/S))/NP 1 0)
+
+(S[wq]\S[wq])/NP
+  2 ((S[wq]{Y}\S[wq]{Y}<1>){_}/NP{Z}<2>){_}
+  ((S\S)/NP 0 2)
+  ((S\S)/NP 1 0)
+
+(S[wq]\(S[dcl]/NP))/N
+  2 ((S[wq]{_}\(S[dcl]{Y}<1>/NP{Z*}){Y}){_}/N{Z}<2>){_}
+  ((S\(S/NP))/N 0 2)
+  ((S\(S/NP))/N 1 0)
+
+(S[wq]/(S[dcl]\NP))/NP
+  2 ((S[wq]{_}/(S[dcl]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  ((S/(S\NP))/NP 0 2)
+  ((S/(S\NP))/NP 0 1)
+
+((NP\NP)/(S[pss]\NP))/NP
+  3 (((NP{Y}\NP{Y}<1>){_}/(S[pss]{Z}<2>\NP{W}){Z}){_}/NP{V}<3>){_}
+  (((NP\NP)/(S\NP))/NP 0 3)
+  (((NP\NP)/(S\NP))/NP 0 2)
+  (((NP\NP)/(S\NP))/NP 1 0)
+
+((S[pss]\NP)/PP)/NP
+  3 (((S[pss]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}
+  (((S\NP)/PP)/NP 0 3)
+  (((S\NP)/PP)/NP 0 2)
+  (((S\NP)/PP)/NP 1 0)
+
+(((S[q]/NP)/PP)/(((S[b]\NP)/PP)/NP))/NP
+  4 ((((S[q]{_}/NP{Y}<1>){_}/PP{Z}<2>){_}/(((S[b]{W}<3>\NP{V*}){W}/PP{Z*}){W}/NP{Y*}){W}){W}/NP{V}<4>){_}
+  ((((S/NP)/PP)/(((S\NP)/PP)/NP))/NP 0 4)
+  ((((S/NP)/PP)/(((S\NP)/PP)/NP))/NP 0 3)
+  ((((S/NP)/PP)/(((S\NP)/PP)/NP))/NP 0 2)
+  ((((S/NP)/PP)/(((S\NP)/PP)/NP))/NP 0 1)
+
+((S[q]/PP)/NP)/NP
+  3 (((S[q]{_}/PP{Y}<1>){_}/NP{Z}<2>){_}/NP{W}<3>){_}
+  (((S/PP)/NP)/NP 0 3)
+  (((S/PP)/NP)/NP 0 2)
+  (((S/PP)/NP)/NP 0 1)
+
+((S[q]/PP)/PP)/NP
+  3 (((S[q]{_}/PP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}
+  (((S/PP)/PP)/NP 0 3)
+  (((S/PP)/PP)/NP 0 2)
+  (((S/PP)/PP)/NP 0 1)
+
+(((S[wq]/NP)/((S[q]/NP)/NP))/N)/(NP/N)
+  4 ((((S[wq]{_}/NP{Y}<1>){_}/((S[q]{Z}<2>/NP{Y*}){Z}/NP{W*}){Z}){_}/N{W}<3>){_}/(NP{V}/N{V}){U}<4>){_}
+  ((((S/NP)/((S/NP)/NP))/N)/(NP/N) 0 4)
+  ((((S/NP)/((S/NP)/NP))/N)/(NP/N) 0 3)
+  ((((S/NP)/((S/NP)/NP))/N)/(NP/N) 0 2)
+  ((((S/NP)/((S/NP)/NP))/N)/(NP/N) 0 1)
+
+(((S[wq]/PP)/((S[q]/PP)/NP))/N)/(NP/N)
+  4 ((((S[wq]{_}/PP{Y}<1>){_}/((S[q]{Z}<2>/PP{Y*}){Z}/NP{W*}){Z}){_}/N{W}<3>){_}/(NP{V}/N{V}){U}<4>){_}
+  ((((S/PP)/((S/PP)/NP))/N)/(NP/N) 0 4)
+  ((((S/PP)/((S/PP)/NP))/N)/(NP/N) 0 3)
+  ((((S/PP)/((S/PP)/NP))/N)/(NP/N) 0 2)
+  ((((S/PP)/((S/PP)/NP))/N)/(NP/N) 0 1)
+
+((S[wq]/PP)/((S[q]/PP)/(S[adj]\NP)))/(S[adj]\NP)
+  3 (((S[wq]{_}/PP{Y}<1>){_}/((S[q]{Z}<2>/PP{Y*}){Z}/(S[adj]{W*}\NP{V}){W*}){Z}){_}/(S[adj]{W}<3>\NP{V}){W}){_}
+  (((S/PP)/((S/PP)/(S\NP)))/(S\NP) 0 3)
+  (((S/PP)/((S/PP)/(S\NP)))/(S\NP) 0 2)
+  (((S/PP)/((S/PP)/(S\NP)))/(S\NP) 0 1)
+
+(S[wq]\(S[dcl]/PP))/(S[wq]\(S[dcl]/NP))
+  2 ((S[wq]{Y}\(S[dcl]{Z}<1>/PP{W}){Z}){Y}/(S[wq]{Y}<2>\(S[dcl]{V}/NP{U}){V}){Y}){_}
+  ((S\(S/PP))/(S\(S/NP)) 0 2)
+  ((S\(S/PP))/(S\(S/NP)) 1 0)
+
+(((S[wq]/(S[pss]\NP))/((S[q]/(S[pss]\NP))/NP))/N)/(NP/N)
+  4 ((((S[wq]{_}/(S[pss]{Y}<1>\NP{Z}){Y}){_}/((S[q]{W}<2>/(S[pss]{Y*}\NP{Z}){Y}){W}/NP{V*}){W}){_}/N{V}<3>){_}/(NP{U}/N{U}){T}<4>){_}
+  ((((S/(S\NP))/((S/(S\NP))/NP))/N)/(NP/N) 0 4)
+  ((((S/(S\NP))/((S/(S\NP))/NP))/N)/(NP/N) 0 3)
+  ((((S/(S\NP))/((S/(S\NP))/NP))/N)/(NP/N) 0 2)
+  ((((S/(S\NP))/((S/(S\NP))/NP))/N)/(NP/N) 0 1)
+
+(S[wq]/(S[q]/NP))/(S[wq]/(S[q]/NP))
+  1 ((S[wq]{Y}/(S[q]{Z}/NP{W}){Z}){Y}/(S[wq]{Y}<1>/(S[q]{Z}/NP{W}){Z}){W}){_}
+  ((S/(S/NP))/(S/(S/NP)) 0 1)
+
+(S[wq]/(S[q]/PP))/N
+  2 ((S[wq]{_}/(S[q]{Y}<1>/PP{Z}){Y}){_}/N{W}<2>){_}
+  ((S/(S/PP))/N 0 2)
+  ((S/(S/PP))/N 0 1)
+
+((S[wq]/(S[q]/PP))/N)/(NP/N)
+  3 (((S[wq]{_}/(S[q]{Y}<1>/PP{Z}){Y}){_}/N{W}<2>){_}/(NP{V}/N{V}){U}<3>){_}
+  (((S/(S/PP))/N)/(NP/N) 0 3)
+  (((S/(S/PP))/N)/(NP/N) 0 2)
+  (((S/(S/PP))/N)/(NP/N) 0 1)
+
+S[wq]\S[wq]
+  1 (S[wq]{Y}\S[wq]{Y}<1>){_}
+  (S\S 1 0)
+
+(S[wq]\S[wq])/(S[dcl]\NP)
+  2 ((S[wq]{Y}\S[wq]{Y}<1>){_}/(S[dcl]{Z}<2>\NP{W}){Z}){_}
+  ((S\S)/(S\NP) 0 2)
+  ((S\S)/(S\NP) 1 0)
+
+S[wq]/(S[q]/PP)
+  1 (S[wq]{_}/(S[q]{Y}<1>/PP{Z}){Y}){_}
+  (S/(S/PP) 0 1)
+
+(S[wq]/(S[q]/PP))/(S[wq]/(S[q]/(S[adj]\NP)))
+  2 ((S[wq]{_}/(S[q]{Y}/PP{Z}){Y}<1>){_}/(S[wq]{W}/(S[q]{V}/(S[adj]{U}\NP{T}){U}){V}){W}<2>){_}
+  ((S/(S/PP))/(S/(S/(S\NP))) 0 2)
+  ((S/(S/PP))/(S/(S/(S\NP))) 0 1)
+
+((S[q]/PP)/(S[adj]\NP))/NP
+  3 (((S[q]{_}/PP{Y}<1>){_}/(S[adj]{Z}<2>\NP{W}){Z}){_}/NP{V}<3>){_}
+  (((S/PP)/(S\NP))/NP 0 3)
+  (((S/PP)/(S\NP))/NP 0 2)
+  (((S/PP)/(S\NP))/NP 0 1)
+
+(S[wq]/(S[q]/(S[adj]\NP)))/(S[adj]\NP)
+  2 ((S[wq]{_}/(S[q]{Y}<1>/(S[adj]{Z}\NP{W}){Z}){V}){_}/(S[adj]{Z}<2>\NP{W}){Z}){_}
+  ((S/(S/(S\NP)))/(S\NP) 0 2)
+  ((S/(S/(S\NP)))/(S\NP) 0 1)
+
+S[wq]\(S[dcl]/NP)
+  1 (S[wq]{_}\(S[dcl]{Y}<1>/NP{Z}){Y}){_}
+  (S\(S/NP) 1 0)
+
+(S[wq]\(S[dcl]/PP))/N
+  2 ((S[wq]{_}\(S[dcl]{Y}<1>/PP{Z}){Y}){_}/N{W}<2>){_}
+  ((S\(S/PP))/N 0 2)
+  ((S\(S/PP))/N 1 0)
+
+(S[wq]\S[wq])/S[dcl]
+  2 ((S[wq]{Y}\S[wq]{Y}<1>){_}/S[dcl]{Z}<2>){_}
+  ((S\S)/S 0 2)
+  ((S\S)/S 1 0)
+
+(((S[q]/PP)/PP)/(S[adj]\NP))/NP
+  4 ((((S[q]{_}/PP{Y}<1>){_}/PP{Z}<2>){_}/(S[adj]{W}<3>\NP{V}){W}){_}/NP{U}<4>){_}
+  ((((S/PP)/PP)/(S\NP))/NP 0 4)
+  ((((S/PP)/PP)/(S\NP))/NP 0 3)
+  ((((S/PP)/PP)/(S\NP))/NP 0 2)
+  ((((S/PP)/PP)/(S\NP))/NP 0 1)
+
+((S[pss]\NP)/NP)/PP
+  3 (((S[pss]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+NP/N
+  1 (NP{Y}/N{Y}<1>){_}
+  (NP 0 {1})
+
+(S[wq]/(S[q]/PP))/(S[wq]/(S[q]/NP))
+  1 ((S[wq]{_}/(S[q]{Y}<1>/PP{Z}){Y}){_}/(S[wq]{W}/(S[q]{V}/NP{U}){V}){W}<1>){_}
+  ((S/(S/PP))/(S/(S/NP)) 0 1)
+
+((S[wq]/(S[q]/PP))\(S[wq]/(S[q]/PP)))/NP
+  2 (((S[wq]{Y}/(S[q]{Z}/PP{W}){Y}){_}\(S[wq]{Y}<1>/(S[q]{Z}/PP{W}){Z}){Y}){_}/NP{V}<2>){_}
+  (((S/(S/PP))\(S/(S/PP)))/NP 0 2)
+  (((S/(S/PP))\(S/(S/PP)))/NP 1 0)
+
+((S[wq]/(S[q]/NP))/N)/(NP/N)
+  3 (((S[wq]{_}/(S[q]{Y}<1>/NP{Z*}){Y}){_}/N{Z}<2>){_}/(NP{W}/N{W}){V}<3>){_}
+  (((S/(S/NP))/N)/(NP/N) 0 3)
+  (((S/(S/NP))/N)/(NP/N) 0 2)
+  (((S/(S/NP))/N)/(NP/N) 0 1)
+
+((S[wq]/PP)/N)/(NP/N)
+  3 (((S[wq]{_}/PP{Y}<1>){_}/N{Z}<2>){_}/(NP{W}/N{W}){V}<3>){_}
+  (((S/PP)/N)/(NP/N) 0 3)
+  (((S/PP)/N)/(NP/N) 0 2)
+  (((S/PP)/N)/(NP/N) 0 1)
+
+(S[wq]\(S[dcl]/PP))/(S[wq]\(S[dcl]/PP))
+  1 ((S[wq]{Y}\(S[dcl]{Z}/PP{W}){Z}){Y}/(S[wq]{Y}<1>\(S[dcl]{Z}/PP{W}){Z}){Y}){_}
+  ((S\(S/PP))/(S\(S/PP)) 0 1)
+
+LQU
+  1 LQU{_}
+
+RQU
+  1 RQU{_}
+
+(((S[b]\NP)/NP)/PP)/NP
+  4 ((((S[b]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/PP{W}<3>){_}/NP{V}<4>){_}
+  ((((S\NP)/NP)/PP)/NP 0 4)
+  ((((S\NP)/NP)/PP)/NP 0 3)
+  ((((S\NP)/NP)/PP)/NP 0 2)
+  ((((S\NP)/NP)/PP)/NP 1 0)
+
+((S[pss]\NP)/NP)/NP
+  3 (((S[pss]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/NP{W}<3>){_}
+  (((S\NP)/NP)/NP 0 3)
+  (((S\NP)/NP)/NP 0 2)
+  (((S\NP)/NP)/NP 1 0)
+
+(N/N)\N
+  2 ((N{Y}/N{Y}<1>){_}\N{Z}<2>){_}
+  ((N/N)\N 2 0)
+  ((N/N)\N 0 1)
+
+(S[q]/(S[pss]\NP))/NP
+  2 ((S[q]{_}/(S[pss]{Y}<1>\NP{Z*}){Y}){_}/NP{Z}<2>){_}
+  (SQ 0 2)
+  (SQ {0} 1)
+
+(S[q]/PP)/NP
+  2 ((S[q]{_}/PP{Y}<1>){_}/NP{Z}<2>){_}
+  ((S/PP)/NP 0 2)
+  ((S/PP)/NP 0 1)
+
+(S[wq]/(S[dcl]\NP))/N
+  2 ((S[wq]{_}/(S[dcl]{Y}<1>\NP{Z*}){Y}){_}/N{Z}<2>){_}
+  (WHNP 0 {2})
+  (SBARQ 0 (SQ 1))
+
+NP/PP
+  1 (NP{_}/PP{Y}<1>){_}
+  (NP/PP 0 1)
+
+((S[q]/NP)/NP)/NP
+  3 (((S[q]{_}/NP{Y}<1>){_}/NP{Z}<2>){_}/NP{W}<3>){_}
+  (((S/NP)/NP)/NP 0 3)
+  (((S/NP)/NP)/NP 0 2)
+  (((S/NP)/NP)/NP 0 1)
+
+(((S[dcl]\NP)/PP)/PP)/PP
+  4 ((((S[dcl]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/PP{W}<3>){_}/PP{V}<4>){_}
+  ((((S\NP)/PP)/PP)/PP 0 4)
+  ((((S\NP)/PP)/PP)/PP 0 3)
+  ((((S\NP)/PP)/PP)/PP 0 2)
+  ((((S\NP)/PP)/PP)/PP 1 0)
+
+PP/N[num]
+  1 (PP{_}/N[num]{Y}<1>){_}
+  (PP/N 0 1)
+
+PP/N
+  1 (PP{_}/N{Y}<1>){_}
+  (PP/N 0 1)
+
+((S[pt]\NP)/PP)/PP
+  3 (((S[pt]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((PP/PP)/(PP/PP))\(S[adj]\NP)
+  2 (((PP{_}/PP{_}){_}/(PP{_}/PP{_}){_}<1>)\(S[adj]{Y}\NP{Z}){Y}<2>){_}
+  (((PP/PP)/(PP/PP))\(S\NP) 2 0)
+  (((PP/PP)/(PP/PP))\(S\NP) 0 1)
+
+((S[pt]\NP)/NP)/PP
+  3 (((S[pt]{_}\NP{Y}<1>){_}/NP{Z}<2>){_}/PP{W}<3>){_}
+  (VP 0 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(((S[pt]\NP)/PP)/PP)/PP
+  4 ((((S[pt]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/PP{W}<3>){_}/PP{V}<4>){_}
+  ((((S\NP)/PP)/PP)/PP 0 4)
+  ((((S\NP)/PP)/PP)/PP 0 3)
+  ((((S\NP)/PP)/PP)/PP 0 2)
+  ((((S\NP)/PP)/PP)/PP 1 0)
+
+PP/(S[dcl]\NP)
+  1 (PP{_}/(S[dcl]{Y}\NP{Z}){Y}<1>){_}
+  (PP 0 1)
+
+(PP\PP)/((S\NP)\(S\NP))
+  1 ((PP{Y}\PP{Y}<1>){Y}/((S{Z}\NP{V}){Z}\(S{Z}\NP{V}){Z}){Z}<2>){_}
+  ((PP\PP)/((S\NP)\(S\NP)) 0 1)
+
+(((S[pt]\NP)/PP)/PP)/NP
+  4 ((((S[pt]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/PP{W}<3>){_}/NP{V}<4>){_}
+  ((((S\NP)/PP)/PP)/NP 0 4)
+  ((((S\NP)/PP)/PP)/NP 0 3)
+  ((((S\NP)/PP)/PP)/NP 0 2)
+  ((((S\NP)/PP)/PP)/NP 1 0)
+
+(((S[dcl]\NP)/PP)/NP)/PP
+  4 ((((S[dcl]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}/PP{V}<4>){_}
+  (VP {0} 4)
+  (VP {0} 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[dcl]\NP)/(S[ng]\NP))/PP
+  3 (((S[dcl]{_}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{Y*}){Z}){_}/PP{V}<3>){_}
+  (((S\NP)/(S\NP))/PP 0 3)
+  (((S\NP)/(S\NP))/PP 0 2)
+  (((S\NP)/(S\NP))/PP 1 0)
+
+(((S[b]\NP)/PP)/NP)/PP
+  4 ((((S[b]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}/PP{V}<4>){_}
+  (VP {0} 4)
+  (VP {0} 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(((S[dcl]\NP)/(S[to]\NP))/PP)/PP
+  4 ((((S[dcl]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/PP{V}<3>){_}/PP{U}<4>){_}
+  (VP {0} 4)
+  (VP {0} 3)
+  (VP {0} 2)
+  (S 1 0)
+
+(((S[ng]\NP)/PP)/NP)/PP
+  4 ((((S[ng]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}/NP{W}<3>){_}/PP{V}<4>){_}
+  (VP {0} 4)
+  (VP {0} 3)
+  (VP {0} 2)
+  (S 1 0)
+
+((S[b]\NP)/(S[ng]\NP))/PP
+  3 (((S[b]{_}\NP{Y}<1>){_}/(S[ng]{Z}<2>\NP{W*}){Z}){_}/PP{V}<3>){_}
+  (VP {0} 3)
+  (VP {0} 2)
+  (S 1 0)
+
+NP/N[num]
+  1 (NP{_}/N[num]{Y}<1>){_}
+  (NP 0 {1})
+
+(((S[dcl]\NP)/(S[to]\NP))/PP)/NP
+  4 ((((S[dcl]{_}\NP{Y}<1>){_}/(S[to]{Z}<2>\NP{W}){Z}){_}/PP{V}<3>){_}/NP{U}<4>){_} 
+  (VP {0} 4)
+  (VP {0} 3)
+  (VP {0} 2)
+  (S 1 0)
+
