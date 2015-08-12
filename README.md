@@ -6,6 +6,12 @@ This software converts Combinatory Categorial Grammar (CCG) derivations to Phras
 Jonathan K. Kummerfeld, James R. Curran and Dan Klein,
 ACL (short) 2012
 
+To use the system, download it one of these ways, and run as shown below:
+
+- [Download .zip](https://github.com/jkkummerfeld/berkeley-ccg2pst/zipball/master)
+- [Download .tar.gz](https://github.com/jkkummerfeld/berkeley-ccg2pst/tarball/master)
+- `git clone https://github.com/jkkummerfeld/berkeley-ccg2pst.git`
+
 If you use my code in your own work, please cite the paper:
 
 ```
