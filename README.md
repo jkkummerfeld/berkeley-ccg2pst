@@ -17,13 +17,13 @@ If you use my code in your own work, please cite the paper:
 ```
 @InProceedings{Kummerfeld-Klein-Curran:2012:ACL,
   author    = {Jonathan K. Kummerfeld  and  Dan Klein  and  James R. Curran},
-  title     = {Robust Conversion of CCG Derivations to Phrase Structure Trees},
+  title     = {Robust Conversion of {CCG} Derivations to Phrase Structure Trees},
   booktitle = {Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},
   month     = {July},
   year      = {2012},
   address   = {Jeju Island, Korea},
   pages     = {105--109},
-  softwar   = {http://github.com/jkkummerfeld/berkeley-ccg2pst/},
+  software  = {http://github.com/jkkummerfeld/berkeley-ccg2pst/},
   url       = {http://www.aclweb.org/anthology/P12-2021},
 }
 ```
