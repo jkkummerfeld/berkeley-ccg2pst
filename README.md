@@ -1,5 +1,3 @@
-# Berkeley CCG to PST converter
-
 This software converts Combinatory Categorial Grammar (CCG) derivations to Phrase Structure Trees (PST).  For a full description of the method, and discussion of results, see:
 
 [Robust Conversion of CCG Derivations to Phrase Structure Trees](https://aclweb.org/anthology/P/P12/P12-2021.pdf),

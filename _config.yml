@@ -1,1 +1,5 @@
 theme: jekyll-theme-cayman
+title: CCG to PST conversion
+description: Convert Combinatory Categorial Grammar derivations to Phrase Structure Trees.
+show_downloads: true
+google_analytics: UA-19179423-2
