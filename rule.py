@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Just handle unary rules, working out when one is being used
 
 import re
@@ -6,365 +6,365 @@ import category
 
 # from, to, keep original dependencies, activated by extra flag
 UNARIES = [
-	('S[adj]\NP','NP\NP',False,False,[
-		'(ADJP 0)',
-		'(NP {1} 0) arg:(NP PP ...):',
-		'(NP 1 0) arg:default:']),
-	('S[to]\NP','NP\NP',True,False,[
-		'{(TEMP 0)}',
-		'(NP {1} (SBAR 0)) arg:(NP PP ...):',
-		'(NP 1 (SBAR 0)) arg:default:']),
-	('S[dcl]/NP','NP\NP',True,False,[
-		'(SBAR 0)',
-		'(NP {1} 0) arg:(NP PP ...):',
-		'(NP 1 0) arg:default:']),
-	('(S[to]\NP)/NP','NP\NP',True,True,[]),
-	('S[dcl]','NP\NP',False,True,[]),
+    ('S[adj]\\NP','NP\\NP',False,False,[
+        '(ADJP 0)',
+        '(NP {1} 0) arg:(NP PP ...):',
+        '(NP 1 0) arg:default:']),
+    ('S[to]\\NP','NP\\NP',True,False,[
+        '{(TEMP 0)}',
+        '(NP {1} (SBAR 0)) arg:(NP PP ...):',
+        '(NP 1 (SBAR 0)) arg:default:']),
+    ('S[dcl]/NP','NP\\NP',True,False,[
+        '(SBAR 0)',
+        '(NP {1} 0) arg:(NP PP ...):',
+        '(NP 1 0) arg:default:']),
+    ('(S[to]\\NP)/NP','NP\\NP',True,True,[]),
+    ('S[dcl]','NP\\NP',False,True,[]),
 
-	('S[pss]\NP','S/S',False,True,[]),
-	('S[ng]\NP','S/S',False,False,[
-		'(S 0)',
-		'(S* 0 {1})']),
-	('S[adj]\NP','S/S',False,True,[]),
-	('S[ng]\NP','S\S',False,True,[]),
-	('S[dcl]','S\S',False,True,[]),
-	('S/S','S\S',False,False,[]),
-	('S[to]\NP','S/S',False,True,[]),
+    ('S[pss]\\NP','S/S',False,True,[]),
+    ('S[ng]\\NP','S/S',False,False,[
+        '(S 0)',
+        '(S* 0 {1})']),
+    ('S[adj]\\NP','S/S',False,True,[]),
+    ('S[ng]\\NP','S\\S',False,True,[]),
+    ('S[dcl]','S\\S',False,True,[]),
+    ('S/S','S\\S',False,False,[]),
+    ('S[to]\\NP','S/S',False,True,[]),
 
-	('S[pss]\NP','(S\NP)\(S\NP)',False,True,[]),
-	('S[ng]\NP','(S\NP)\(S\NP)',False,False,[
-		'(S 0)',
-		'(VP {1} 0)',
-		'(S 1 0)']),
-	('S[adj]\NP','(S\NP)\(S\NP)',False,False,[
-		'(S (ADJP 0))',
-		'(VP {1} 0)',
-		'(S 1 0)']),
-	('S[to]\NP','(S\NP)\(S\NP)',False,False,[
-		'(S 0)',
-		'(VP {1} 0)',
-		'(S 1 0)']),
+    ('S[pss]\\NP','(S\\NP)\\(S\\NP)',False,True,[]),
+    ('S[ng]\\NP','(S\\NP)\\(S\\NP)',False,False,[
+        '(S 0)',
+        '(VP {1} 0)',
+        '(S 1 0)']),
+    ('S[adj]\\NP','(S\\NP)\\(S\\NP)',False,False,[
+        '(S (ADJP 0))',
+        '(VP {1} 0)',
+        '(S 1 0)']),
+    ('S[to]\\NP','(S\\NP)\\(S\\NP)',False,False,[
+        '(S 0)',
+        '(VP {1} 0)',
+        '(S 1 0)']),
 
-	('S[ng]\NP','NP',False,True,[
-		'(S {0})']),
-	('N','NP',False,False,[
-		'(NP {0})']),
-	# Need to implement filtering based on self...
-###	('N','NP',False,False,[
-###		'{(TEMP 0)}',
-###		'(QP {0}) self:(... QP):',
-###		'(QP 0) self:(... CD):',
-###		'(NP {0}) self:default:']),
+    ('S[ng]\\NP','NP',False,True,[
+        '(S {0})']),
+    ('N','NP',False,False,[
+        '(NP {0})']),
+    # Need to implement filtering based on self...
+### ('N','NP',False,False,[
+###     '{(TEMP 0)}',
+###     '(QP {0}) self:(... QP):',
+###     '(QP 0) self:(... CD):',
+###     '(NP {0}) self:default:']),
 
-	('S[ng]\NP','(S\NP)/(S\NP)',False,True,[]),
-	('S[to]\NP','N\N',True,False,[]),
-	('NP','NP/(NP\NP)',False,True,[]),
-	('S[dcl][conj]','S[dcl]',False,False,[
-		'{(TEMP 0)}']),
-	('PP','(S\NP)\((S\NP)/PP)',False,False,[]),
-	('S[to]\NP','(S\NP)\((S\NP)/(S[to]\NP))',False,False,[]),
-	('S[adj]\NP','(S\NP)\((S\NP)/(S[adj]\NP))',False,False,[]),
-	('NP','S/(S\NP)',False,False,[]),
-	('NP','(S\NP)\((S\NP)/NP)',False,False,[]),
-	('NP','((S\NP)/NP)\(((S\NP)/NP)/NP)',False,False,[]),
-	('NP','((S\NP)/(S[to]\NP))\(((S\NP)/(S[to]\NP))/NP)',False,False,[]),
-	('NP','((S\NP)/PP)\(((S\NP)/PP)/NP)',False,False,[]),
-	('NP','((S\NP)/(S[adj]\NP))\(((S\NP)/(S[adj]\NP))/NP)',False,False,[]),
-	('NP','S/(S/NP)',False,False,[
-		'{(TEMP 0)}',
-		'(S 0 {1})']),
+    ('S[ng]\\NP','(S\\NP)/(S\\NP)',False,True,[]),
+    ('S[to]\\NP','N\\N',True,False,[]),
+    ('NP','NP/(NP\\NP)',False,True,[]),
+    ('S[dcl][conj]','S[dcl]',False,False,[
+        '{(TEMP 0)}']),
+    ('PP','(S\\NP)\\((S\\NP)/PP)',False,False,[]),
+    ('S[to]\\NP','(S\\NP)\\((S\\NP)/(S[to]\\NP))',False,False,[]),
+    ('S[adj]\\NP','(S\\NP)\\((S\\NP)/(S[adj]\\NP))',False,False,[]),
+    ('NP','S/(S\\NP)',False,False,[]),
+    ('NP','(S\\NP)\\((S\\NP)/NP)',False,False,[]),
+    ('NP','((S\\NP)/NP)\\(((S\\NP)/NP)/NP)',False,False,[]),
+    ('NP','((S\\NP)/(S[to]\\NP))\\(((S\\NP)/(S[to]\\NP))/NP)',False,False,[]),
+    ('NP','((S\\NP)/PP)\\(((S\\NP)/PP)/NP)',False,False,[]),
+    ('NP','((S\\NP)/(S[adj]\\NP))\\(((S\\NP)/(S[adj]\\NP))/NP)',False,False,[]),
+    ('NP','S/(S/NP)',False,False,[
+        '{(TEMP 0)}',
+        '(S 0 {1})']),
 
-	('S[dcl]','((S\NP)\(S\NP))\((S\NP)\(S\NP))',False,False,[
-		'(SBAR 0)',
-		'(NP 1 0)',
-		'(VP {1} 0)',
-		'(S 1 0)']),
+    ('S[dcl]','((S\\NP)\\(S\\NP))\\((S\\NP)\\(S\\NP))',False,False,[
+        '(SBAR 0)',
+        '(NP 1 0)',
+        '(VP {1} 0)',
+        '(S 1 0)']),
 
-	('S[X]\NP','NP\NP',True,False,[])
+    ('S[X]\\NP','NP\\NP',True,False,[])
 ]
 
 def get_unary(start_cat, end_cat, markedup=None):
-	# Note: PP_qus - for questions only, ignored for now
-	for unary in UNARIES:
-		start = unary[0]
-		end_markup = unary[1]
-		end = category.strip_braces(end_markup)
-		keep_deps = unary[2]
-		extra = unary[3]
-		rules = unary[4]
-		if category.compare(start_cat, start):
-			if category.compare(end_cat, end):
-				if len(rules) > 0:
-					return rules
-				elif markedup is not None:
-					if end in markedup:
-						return markedup[end][1:]
-					end_no_brac = category.strip_square_brackets(end)
-					if end_no_brac in markedup:
-						return markedup[end_no_brac][1:]
-				else:
-					return []
-	return None
+    # Note: PP_qus - for questions only, ignored for now
+    for unary in UNARIES:
+        start = unary[0]
+        end_markup = unary[1]
+        end = category.strip_braces(end_markup)
+        keep_deps = unary[2]
+        extra = unary[3]
+        rules = unary[4]
+        if category.compare(start_cat, start):
+            if category.compare(end_cat, end):
+                if len(rules) > 0:
+                    return rules
+                elif markedup is not None:
+                    if end in markedup:
+                        return markedup[end][1:]
+                    end_no_brac = category.strip_square_brackets(end)
+                    if end_no_brac in markedup:
+                        return markedup[end_no_brac][1:]
+                else:
+                    return []
+    return None
 
 BINARIES = [
-	(',','NP','(S\NP)\(S\NP)',False,[
-		'(ADVP {0} 1)',
-		'(VP {1} {0})',
-		'(S 1 0)']),
-	('NP',',','S/S',False,[
-		'(S (S 0) 1)',
-		'(S* {0} 1)']),
-	('S[dcl]\S[dcl]',',','S/S',False,[
-		'(PRN (SINV 0) 1)',
-		'(S* 0 1)']),
-	('S[dcl]/S[dcl]',',','(S\NP)/(S\NP)',False,[
-		'(S 0 1)',
-		'(S {0} 1)',
-		'(S 1 {0})']),
-	('S[dcl]/S[dcl]',',','(S\NP)\(S\NP)',False,[
-		'(S 0 1)',
-		'(S 1 {0})',
-		'(S 1 {0})']),
-	('S[dcl]/S[dcl]',',','S/S',False,[
-		'(S 0 1)',
-		'(S* {0} {1})']),
-	('S[dcl]/S[dcl]',',','S\S',False,[
-		'(S 0 1)',
-		'(S* {1} {0})']),
+    (',','NP','(S\\NP)\\(S\\NP)',False,[
+        '(ADVP {0} 1)',
+        '(VP {1} {0})',
+        '(S 1 0)']),
+    ('NP',',','S/S',False,[
+        '(S (S 0) 1)',
+        '(S* {0} 1)']),
+    ('S[dcl]\\S[dcl]',',','S/S',False,[
+        '(PRN (SINV 0) 1)',
+        '(S* 0 1)']),
+    ('S[dcl]/S[dcl]',',','(S\\NP)/(S\\NP)',False,[
+        '(S 0 1)',
+        '(S {0} 1)',
+        '(S 1 {0})']),
+    ('S[dcl]/S[dcl]',',','(S\\NP)\\(S\\NP)',False,[
+        '(S 0 1)',
+        '(S 1 {0})',
+        '(S 1 {0})']),
+    ('S[dcl]/S[dcl]',',','S/S',False,[
+        '(S 0 1)',
+        '(S* {0} {1})']),
+    ('S[dcl]/S[dcl]',',','S\\S',False,[
+        '(S 0 1)',
+        '(S* {1} {0})']),
 
-	# not generated by C&C
-	('S[dcl]',',','S/S',False,[
-		'(S {0} 1)',
-		'(S* 0 {1})']),
-	('S[dcl]',',','S\S',False,[
-		'(S (PRN 0) 1)',
-		'(S* {1} {0})']),
-	('S[dcl]',',','NP\NP',False,[
-		'(S {0} 1)',
-		'(NP 1 0)']),
-	('S[adj]\NP',',','NP\NP',False,[
-		'(S {0} 1)',
-		'(NP 1 0)']),
-	('S[dcl]',',','(S\NP)\(S\NP)',False,[
-		'(S 0 1)',
-		'(VP {1} 0)',
-		'(S 1 0)']),
-	('((S[pss]\NP)/PP)/NP','(S\NP)\(S\NP)','((S[pss]\NP)/PP)/NP',False,[
-		'(VP {0} 1)',
-		'(VP {0} 3)',
-		'(VP {0} 2)',
-		'(S 1 0)']),
-	('S[dcl]/S[dcl]',',','NP\NP',False,[
-		'(S {0} 1)',
-		'(NP 1 0)']),
-	('S[dcl]\S[dcl]',',','(S\NP)\(S\NP)',False,[
-		'{(TEMP 0 1)}',
-		'(VP {1} 0)',
-		'(S 1 0)']),
-	('S[dcl]\S[dcl]',',','(S\NP)/(S\NP)',False,[
-		'(PRN (SINV 0) 1)',
-		'(S 0 1)',
-		'(S 1 {0})'])
-###	('S[dcl]\S[dcl]',',','S\S',False,[])
-###	('((S[dcl]\NP)/PP)/NP','(S\NP)\(S\NP)','((S[dcl]\NP)/PP)/NP',False,[])
-###	('((S[dcl]\NP[expl])/(S[to]\NP))/(S[adj]\NP)','(S\NP)\(S\NP)','((S[dcl]\NP[expl])/','(S[to]\NP))/(S[adj]\NP)',False,[])
-###	('((S[dcl]\NP[expl])/(S[to]\NP))/NP','(S\NP)\(S\NP)','((S[dcl]\NP[expl])/(S[to]\NP))/NP',False,[])
-###	('((S[dcl]\NP[expl])/S[dcl])/(S[adj]\NP)','(S\NP)\(S\NP)','((S[dcl]\NP[expl])/S[dcl])/','(S[adj]\NP)',False,[])
-###	('((S[dcl]\NP[expl])/S[dcl])/NP','(S\NP)\(S\NP)','((S[dcl]\NP[expl])/S[dcl])/NP',False,[])
-###	('((S[dcl]\NP[expl])/S[qem])/(S[adj]\NP)','(S\NP)\(S\NP)','((S[dcl]\NP[expl])/S[qem])/','(S[adj]\NP)',False,[])
-###	('((S[ng]\NP)/PP)/NP','(S\NP)\(S\NP)','((S[ng]\NP)/PP)/NP',False,[])
-###	('(S[dcl]\(S[to]\NP))/(S[b]\NP)','S\S','(S[dcl]\(S[to]\NP))/(S[b]\NP)',False,[])
-###	('(S[dcl]\S[dcl])\NP','S\S','(S[dcl]\S[dcl])\NP',False,[])
-###	('(S[q]/(S[b]\NP))/NP','S\S','(S[q]/(S[b]\NP))/NP',False,[])
+    # not generated by C&C
+    ('S[dcl]',',','S/S',False,[
+        '(S {0} 1)',
+        '(S* 0 {1})']),
+    ('S[dcl]',',','S\\S',False,[
+        '(S (PRN 0) 1)',
+        '(S* {1} {0})']),
+    ('S[dcl]',',','NP\\NP',False,[
+        '(S {0} 1)',
+        '(NP 1 0)']),
+    ('S[adj]\\NP',',','NP\\NP',False,[
+        '(S {0} 1)',
+        '(NP 1 0)']),
+    ('S[dcl]',',','(S\\NP)\\(S\\NP)',False,[
+        '(S 0 1)',
+        '(VP {1} 0)',
+        '(S 1 0)']),
+    ('((S[pss]\\NP)/PP)/NP','(S\\NP)\\(S\\NP)','((S[pss]\\NP)/PP)/NP',False,[
+        '(VP {0} 1)',
+        '(VP {0} 3)',
+        '(VP {0} 2)',
+        '(S 1 0)']),
+    ('S[dcl]/S[dcl]',',','NP\\NP',False,[
+        '(S {0} 1)',
+        '(NP 1 0)']),
+    ('S[dcl]\\S[dcl]',',','(S\\NP)\\(S\\NP)',False,[
+        '{(TEMP 0 1)}',
+        '(VP {1} 0)',
+        '(S 1 0)']),
+    ('S[dcl]\\S[dcl]',',','(S\\NP)/(S\\NP)',False,[
+        '(PRN (SINV 0) 1)',
+        '(S 0 1)',
+        '(S 1 {0})'])
+### ('S[dcl]\\S[dcl]',',','S\\S',False,[])
+### ('((S[dcl]\\NP)/PP)/NP','(S\\NP)\\(S\\NP)','((S[dcl]\\NP)/PP)/NP',False,[])
+### ('((S[dcl]\\NP[expl])/(S[to]\\NP))/(S[adj]\\NP)','(S\\NP)\\(S\\NP)','((S[dcl]\\NP[expl])/','(S[to]\\NP))/(S[adj]\\NP)',False,[])
+### ('((S[dcl]\\NP[expl])/(S[to]\\NP))/NP','(S\\NP)\\(S\\NP)','((S[dcl]\\NP[expl])/(S[to]\\NP))/NP',False,[])
+### ('((S[dcl]\\NP[expl])/S[dcl])/(S[adj]\\NP)','(S\\NP)\\(S\\NP)','((S[dcl]\\NP[expl])/S[dcl])/','(S[adj]\\NP)',False,[])
+### ('((S[dcl]\\NP[expl])/S[dcl])/NP','(S\\NP)\\(S\\NP)','((S[dcl]\\NP[expl])/S[dcl])/NP',False,[])
+### ('((S[dcl]\\NP[expl])/S[qem])/(S[adj]\\NP)','(S\\NP)\\(S\\NP)','((S[dcl]\\NP[expl])/S[qem])/','(S[adj]\\NP)',False,[])
+### ('((S[ng]\\NP)/PP)/NP','(S\\NP)\\(S\\NP)','((S[ng]\\NP)/PP)/NP',False,[])
+### ('(S[dcl]\\(S[to]\\NP))/(S[b]\\NP)','S\\S','(S[dcl]\\(S[to]\\NP))/(S[b]\\NP)',False,[])
+### ('(S[dcl]\\S[dcl])\\NP','S\\S','(S[dcl]\\S[dcl])\\NP',False,[])
+### ('(S[q]/(S[b]\\NP))/NP','S\\S','(S[q]/(S[b]\\NP))/NP',False,[])
 
-###	('(S\NP)/(S\NP)','(S[ng]\NP)\(S[adj]\NP)','(S[ng]\NP)\(S[adj]\NP)',False,['(VP 0 1)','(ADJP 1 0)','(S 1 0)'])
+### ('(S\\NP)/(S\\NP)','(S[ng]\\NP)\\(S[adj]\\NP)','(S[ng]\\NP)\\(S[adj]\\NP)',False,['(VP 0 1)','(ADJP 1 0)','(S 1 0)'])
 ]
 
 def get_binary_for_markedup(left, right, result, markedup=None, flexible=False):
-	for binary in BINARIES:
-		if category.compare(left, binary[0]):
-			if category.compare(right, binary[1]):
-				if category.compare(result, binary[2]):
-					keep_deps = binary[3]
-					rules = binary[4]
-					if len(rules) > 0:
-						return rules
-					elif markedup is not None:
-						return ['(S 0 1)'] + markedup[result][1:]
-					else:
-						return []
-	if flexible:
-		for binary in BINARIES:
-			if category.compare(result, binary[2]):
-				rules = binary[4]
-				if len(rules) > 0:
-					return rules
-				elif markedup is not None:
-					return ['(S 0 1)'] + markedup[result][1:]
-				else:
-					return []
-	if markedup is not None:
-		return ['(S 0 1)'] + markedup[result][1:]
-	return None
+    for binary in BINARIES:
+        if category.compare(left, binary[0]):
+            if category.compare(right, binary[1]):
+                if category.compare(result, binary[2]):
+                    keep_deps = binary[3]
+                    rules = binary[4]
+                    if len(rules) > 0:
+                        return rules
+                    elif markedup is not None:
+                        return ['(S 0 1)'] + markedup[result][1:]
+                    else:
+                        return []
+    if flexible:
+        for binary in BINARIES:
+            if category.compare(result, binary[2]):
+                rules = binary[4]
+                if len(rules) > 0:
+                    return rules
+                elif markedup is not None:
+                    return ['(S 0 1)'] + markedup[result][1:]
+                else:
+                    return []
+    if markedup is not None:
+        return ['(S 0 1)'] + markedup[result][1:]
+    return None
 
 def get_binary(left, right, result, markedup=None):
-	for binary in BINARIES:
-		if category.compare(left, binary[0]):
-			if category.compare(right, binary[1]):
-				if category.compare(result, binary[2]):
-					keep_deps = binary[3]
-					rules = binary[4]
-					if len(rules) > 0:
-						return rules
-					elif markedup is not None:
-						return ['(S 0 1)'] + markedup[result][1:]
-					else:
-						return []
-	return None
+    for binary in BINARIES:
+        if category.compare(left, binary[0]):
+            if category.compare(right, binary[1]):
+                if category.compare(result, binary[2]):
+                    keep_deps = binary[3]
+                    rules = binary[4]
+                    if len(rules) > 0:
+                        return rules
+                    elif markedup is not None:
+                        return ['(S 0 1)'] + markedup[result][1:]
+                    else:
+                        return []
+    return None
 
 def determine_combinator(source, result):
-###	print len(source)
-###	print ' '.join(source), result
-	if len(source) == 0:
-		return 'lex'
-	if len(source) == 1:
-		if get_unary(source[0].category, result) is not None:
-			return 'unary'
-		return 'type'
-	if len(source) == 2:
-		left = source[0].category
-		right = source[1].category
-		result_parts = category.divide(result)
-		left_parts = category.divide(left)
-		right_parts = category.divide(right)
+### print(len(source))
+### print(' '.join(source), result)
+    if len(source) == 0:
+        return 'lex'
+    if len(source) == 1:
+        if get_unary(source[0].category, result) is not None:
+            return 'unary'
+        return 'type'
+    if len(source) == 2:
+        left = source[0].category
+        right = source[1].category
+        result_parts = category.divide(result)
+        left_parts = category.divide(left)
+        right_parts = category.divide(right)
 
-		if get_binary(left, right, result) is not None:
-			return 'binary'
+        if get_binary(left, right, result) is not None:
+            return 'binary'
 
-		# Coordination
-		# X = X CONJ X
-		if left == 'conj' or (result.endswith('[conj]') and not '[conj]' in right):
-			if right == 'conj\\conj':
-				return 'fa.b'
-			return 'conj1'
-		elif 'conj' in source[1].rule or '[conj]' in right:
-			if category.compare(left, right):
-				return 'conj2'
-			if category.compare(category.divide(left)[2], right) and category.divide(left)[1] == '/':
-				return 'fa.f'
-			if category.compare(category.divide(right)[0], left) and category.divide(right)[1] is not None:
-				if 'conj2' in source[1].rule or '[conj]' in right and category.compare(category.divide(right)[2], left):
-					return 'fa.b'
-				else:
-					return 'conj1'
-			if category.compare(category.divide(right)[2], left):
-				return 'fa.b'
-			if (category.compare(left_parts[2], result_parts[2]) and
-					category.compare(left_parts[0], right_parts[2]) and
-					category.compare(right_parts[0], result_parts[0]) and
-					left_parts[1] == result_parts[1] == '/' and
-					right_parts[1] == '\\'):
-				return 'cc.b'
-			if (category.compare(left_parts[2], right_parts[0]) and
-					category.compare(left_parts[0], result_parts[0]) and
-					category.compare(right_parts[2], result_parts[2]) and
-					left_parts[1] == right_parts[1] == result_parts[1] == '/'):
-				return 'fc.f'
-			if (category.compare(left_parts[2], result_parts[2]) and
-					category.compare(left_parts[0], right_parts[2]) and
-					category.compare(right_parts[0], result_parts[0]) and
-					left_parts[1] == right_parts[1] == result_parts[1] == '\\'):
-				return 'fc.b'
-			if category.compare(result, left):
-				if '[conj]' in result:
-					return 'conj2'
-				raw_right = right
-				if '[conj]' in right:
-					raw_right = right[:-6]
-				if category.compare(result, raw_right):
-					return 'conj2'
-			else:
-				return 'conj2'
-		elif 'conj1' in source[0].rule or '[conj]' in left:
-			return 'conj2'
-		# consider conj3, to handle , separated lists
+        # Coordination
+        # X = X CONJ X
+        if left == 'conj' or (result.endswith('[conj]') and not '[conj]' in right):
+            if right == 'conj\\conj':
+                return 'fa.b'
+            return 'conj1'
+        elif 'conj' in source[1].rule or '[conj]' in right:
+            if category.compare(left, right):
+                return 'conj2'
+            if category.compare(category.divide(left)[2], right) and category.divide(left)[1] == '/':
+                return 'fa.f'
+            if category.compare(category.divide(right)[0], left) and category.divide(right)[1] is not None:
+                if 'conj2' in source[1].rule or '[conj]' in right and category.compare(category.divide(right)[2], left):
+                    return 'fa.b'
+                else:
+                    return 'conj1'
+            if category.compare(category.divide(right)[2], left):
+                return 'fa.b'
+            if (category.compare(left_parts[2], result_parts[2]) and
+                    category.compare(left_parts[0], right_parts[2]) and
+                    category.compare(right_parts[0], result_parts[0]) and
+                    left_parts[1] == result_parts[1] == '/' and
+                    right_parts[1] == '\\'):
+                return 'cc.b'
+            if (category.compare(left_parts[2], right_parts[0]) and
+                    category.compare(left_parts[0], result_parts[0]) and
+                    category.compare(right_parts[2], result_parts[2]) and
+                    left_parts[1] == right_parts[1] == result_parts[1] == '/'):
+                return 'fc.f'
+            if (category.compare(left_parts[2], result_parts[2]) and
+                    category.compare(left_parts[0], right_parts[2]) and
+                    category.compare(right_parts[0], result_parts[0]) and
+                    left_parts[1] == right_parts[1] == result_parts[1] == '\\'):
+                return 'fc.b'
+            if category.compare(result, left):
+                if '[conj]' in result:
+                    return 'conj2'
+                raw_right = right
+                if '[conj]' in right:
+                    raw_right = right[:-6]
+                if category.compare(result, raw_right):
+                    return 'conj2'
+            else:
+                return 'conj2'
+        elif 'conj1' in source[0].rule or '[conj]' in left:
+            return 'conj2'
+        # consider conj3, to handle , separated lists
 
-		# Function application
-		# X = X/Y + Y
-		if (left_parts[1] == '/' and
-		    category.compare(left_parts[2], right) and
-		    category.compare(left_parts[0], result)):
-			return 'fa.f'
-		# X = Y + X\Y
-		if (right_parts[1] == '\\' and
-		    category.compare(right_parts[2], left) and
-		    category.compare(right_parts[0], result)):
-			return 'fa.b'
+        # Function application
+        # X = X/Y + Y
+        if (left_parts[1] == '/' and
+            category.compare(left_parts[2], right) and
+            category.compare(left_parts[0], result)):
+            return 'fa.f'
+        # X = Y + X\\Y
+        if (right_parts[1] == '\\' and
+            category.compare(right_parts[2], left) and
+            category.compare(right_parts[0], result)):
+            return 'fa.b'
 
-		# Function composition
-		# X/Z = X/Y + Y/Z
-		if (category.compare(left_parts[2], right_parts[0]) and
-		    category.compare(left_parts[0], result_parts[0]) and
-		    category.compare(right_parts[2], result_parts[2]) and
-		    left_parts[1] == right_parts[1] == result_parts[1] == '/'):
-			return 'fc.f'
-		# X\Z = Y\Z + X\Y
-		if (category.compare(left_parts[2], result_parts[2]) and
-		    category.compare(left_parts[0], right_parts[2]) and
-		    category.compare(right_parts[0], result_parts[0]) and
-		    left_parts[1] == right_parts[1] == result_parts[1] == '\\'):
-			return 'fc.b'
+        # Function composition
+        # X/Z = X/Y + Y/Z
+        if (category.compare(left_parts[2], right_parts[0]) and
+            category.compare(left_parts[0], result_parts[0]) and
+            category.compare(right_parts[2], result_parts[2]) and
+            left_parts[1] == right_parts[1] == result_parts[1] == '/'):
+            return 'fc.f'
+        # X\\Z = Y\\Z + X\\Y
+        if (category.compare(left_parts[2], result_parts[2]) and
+            category.compare(left_parts[0], right_parts[2]) and
+            category.compare(right_parts[0], result_parts[0]) and
+            left_parts[1] == right_parts[1] == result_parts[1] == '\\'):
+            return 'fc.b'
 
-		# Crossed composition
-		# X/Z = Y/Z + X\Y
-		# For example:
-		# (S\NP)/(S\NP) = (S\NP)/(S\NP) + (S\NP)\(S\NP)
-		if (category.compare(left_parts[2], result_parts[2]) and
-		    category.compare(left_parts[0], right_parts[2]) and
-		    category.compare(right_parts[0], result_parts[0]) and
-		    left_parts[1] == result_parts[1] == '/' and
-		    right_parts[1] == '\\'):
-			return 'cc.b'
-		# Z\X = Z/Y + Y\X
-		# ((S\NP)/S)/(S\NP) = ((S\NP)/S)/(S\NP) + (S\NP)\(S\NP)
+        # Crossed composition
+        # X/Z = Y/Z + X\\Y
+        # For example:
+        # (S\\NP)/(S\\NP) = (S\\NP)/(S\\NP) + (S\\NP)\\(S\\NP)
+        if (category.compare(left_parts[2], result_parts[2]) and
+            category.compare(left_parts[0], right_parts[2]) and
+            category.compare(right_parts[0], result_parts[0]) and
+            left_parts[1] == result_parts[1] == '/' and
+            right_parts[1] == '\\'):
+            return 'cc.b'
+        # Z\\X = Z/Y + Y\\X
+        # ((S\\NP)/S)/(S\\NP) = ((S\\NP)/S)/(S\\NP) + (S\\NP)\\(S\\NP)
 
-		# Backward crossed substitution
-		# X/Z = B/Z + (X\B)/Z
-		if (left_parts[1] == right_parts[1] == result_parts[1] == '/' and
-		    category.compare(left_parts[2], result_parts[2]) and
-		    category.compare(right_parts[2], result_parts[2])):
-			sub_parts = category.divide(right_parts[0])
-			if (category.compare(sub_parts[0], result_parts[0]) and
-			    category.compare(sub_parts[2], left_parts[0]) and
-			    sub_parts[1] != left_parts[1]):
-				return 'bs.f'
-		# X\Z = (X/B)\Z + B\Z
-		if (left_parts[1] == right_parts[1] == result_parts[1] == '\\' and
-		    category.compare(left_parts[2], result_parts[2]) and
-		    category.compare(right_parts[2], result_parts[2])):
-			sub_parts = category.divide(left_parts[0])
-			if (sub_parts[0] == result_parts[0] and
-			    sub_parts[2] == right_parts[0] and
-			    sub_parts[1] != right_parts[1]):
-				return 'bs.b'
-		# There are restrictions on what B can be, but since this is a parse, and
-		# all other options have been exhausted, this must be what is going on
+        # Backward crossed substitution
+        # X/Z = B/Z + (X\\B)/Z
+        if (left_parts[1] == right_parts[1] == result_parts[1] == '/' and
+            category.compare(left_parts[2], result_parts[2]) and
+            category.compare(right_parts[2], result_parts[2])):
+            sub_parts = category.divide(right_parts[0])
+            if (category.compare(sub_parts[0], result_parts[0]) and
+                category.compare(sub_parts[2], left_parts[0]) and
+                sub_parts[1] != left_parts[1]):
+                return 'bs.f'
+        # X\\Z = (X/B)\\Z + B\\Z
+        if (left_parts[1] == right_parts[1] == result_parts[1] == '\\' and
+            category.compare(left_parts[2], result_parts[2]) and
+            category.compare(right_parts[2], result_parts[2])):
+            sub_parts = category.divide(left_parts[0])
+            if (sub_parts[0] == result_parts[0] and
+                sub_parts[2] == right_parts[0] and
+                sub_parts[1] != right_parts[1]):
+                return 'bs.b'
+        # There are restrictions on what B can be, but since this is a parse, and
+        # all other options have been exhausted, this must be what is going on
 
-		# Uncomment to see what is misc:
-###	if left == result and '/' not in right and '\\' not in right:
-###		pass
-###	elif right == result and '/' not in left and '\\' not in left:
-###		pass
-###	elif '[conj]' in left or '[conj]' in right or '[conj]' in result:
-###		pass
-###	else:
-###		print 'misc rule:', left, right, result
-###		print ' ', left_parts
-###		print ' ', right_parts
-###		print ' ', result_parts
-		if category.divide(result)[0] == right and category.divide(result)[1] is not None:
-			return 'conj1'
-	return 'misc'
+        # Uncomment to see what is misc:
+### if left == result and '/' not in right and '\\' not in right:
+###     pass
+### elif right == result and '/' not in left and '\\' not in left:
+###     pass
+### elif '[conj]' in left or '[conj]' in right or '[conj]' in result:
+###     pass
+### else:
+###     print('misc rule:', left, right, result)
+###     print(' ', left_parts)
+###     print(' ', right_parts)
+###     print(' ', result_parts)
+        if category.divide(result)[0] == right and category.divide(result)[1] is not None:
+            return 'conj1'
+    return 'misc'
 
 if __name__ == '__main__':
-	pass
+    pass

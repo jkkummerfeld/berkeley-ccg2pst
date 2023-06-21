@@ -30,12 +30,12 @@ If you use my code in your own work, please cite the paper:
 
 On a sample of CCGbank:
 ```
-./src/convert.py sample.gold_ptb sample.ccgbank -print_comparison -prefix=sample.ccgbank -verbose -method=markedup ./src/markedup
+./convert.py sample.gold_ptb sample.ccgbank -print_comparison -prefix=sample.ccgbank -verbose -method=markedup ./markedup
 ```
 
 On a sample of C&C Parser output:
 ```
-./src/convert.py sample.gold_ptb sample.candc -print_comparison -prefix=sample.candc -verbose -method=markedup ./src/markedup
+./convert.py sample.gold_ptb sample.candc -print_comparison -prefix=sample.candc -verbose -method=markedup ./markedup
 ```
 
 Conversion output will be in:
