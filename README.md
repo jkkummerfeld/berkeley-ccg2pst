@@ -47,6 +47,3 @@ sample.candc.auto
 The code also comes with a sample of parses from the Penn Treebank section 00,
 the corresponding parses from CCGbank section 00, and the C&C parser output on
 the same sentences.
-
-The src directory contains all of the python files required to execute
-convert.py and the instruction sets for categories (in markedup).
